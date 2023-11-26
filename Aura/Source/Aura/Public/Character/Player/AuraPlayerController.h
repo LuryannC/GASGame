@@ -43,7 +43,10 @@ private:
 	void RotateCamera(const FInputActionValue& ActionValue);
 
 	void CursorTrace();
-	IEnemyInterface* LastActor;
-	IEnemyInterface* ThisActor;
+	IEnemyInterface* LastTargetActorInterface;
+	IEnemyInterface* CurrentTargetActorInterface;
+
+	UPROPERTY(EditAnywhere)
+	float TraceDistance = 200.0;
 	
 };

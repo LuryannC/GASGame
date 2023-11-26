@@ -7,6 +7,8 @@
         "Includes": [
             "d:\\repositories\\gasgame\\aura\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\aura\\definitions.aura.h",
             "d:\\repositories\\gasgame\\aura\\source\\aura\\public\\character\\auracharacterbase.h",
+            "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysysteminterface.h",
+            "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysysteminterface.generated.h",
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",

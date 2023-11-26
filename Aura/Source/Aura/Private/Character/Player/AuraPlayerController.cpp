@@ -6,6 +6,9 @@
 #include "../../../../../../../../EpicGames/UE_5.3/Engine/Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputSubsystems.h"
 #include "../../../../../../../../EpicGames/UE_5.3/Engine/Plugins/EnhancedInput/Source/EnhancedInput/Public/EnhancedInputComponent.h"
 #include "../../../../../../../../EpicGames/UE_5.3/Engine/Plugins/EnhancedInput/Source/EnhancedInput/Public/InputActionValue.h"
+#include "Camera/CameraComponent.h"
+#include "Character/AuraCharacter.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "Interactions/EnemyInterface.h"
 
 
@@ -61,7 +64,7 @@ void AAuraPlayerController::Move(const FInputActionValue& ActionValue)
 	const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
 	const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 
-	if (APawn* ControlledPawn = GetPawn<APawn>())
+	if (AAuraCharacter* ControlledPawn = GetPawn<AAuraCharacter>())
 	{
 		ControlledPawn->AddMovementInput(ForwardDirection, InputAxisVector.Y);
 		ControlledPawn->AddMovementInput(RightDirection, InputAxisVector.X);
@@ -75,33 +78,70 @@ void AAuraPlayerController::RotateCamera(const FInputActionValue& ActionValue)
 	if (APawn* ControlledPawn = GetPawn<APawn>())
 	{
 		ControlledPawn->AddControllerYawInput(InputValue.X);
-		ControlledPawn->AddControllerPitchInput(InputValue.Y);
+		ControlledPawn->AddControllerPitchInput(InputValue.Y*-1.0f);
 	}
 }
 
 void AAuraPlayerController::CursorTrace()
 {	
-	if (APawn* ControlledPawn = GetPawn<APawn>())
+	if (AAuraCharacter* ControlledPawn = GetPawn<AAuraCharacter>())
 	{
-		FHitResult CursorHit;		
+		FHitResult HitResult;
+		const FVector StartLocation = ControlledPawn->FollowCamera->K2_GetComponentLocation();
+		const FVector FinalLocation = ControlledPawn->FollowCamera->K2_GetComponentLocation() + (ControlledPawn->FollowCamera->GetForwardVector() * TraceDistance);
 		
-		GetHitResultUnderCursor(ECC_Visibility, false, CursorHit);
-		if (!CursorHit.bBlockingHit) return;
+		HitResult.TraceStart = StartLocation;
+		HitResult.TraceEnd = FinalLocation;
+		FCollisionQueryParams CollisionQueryParams;
+		
+		CollisionQueryParams.AddIgnoredActor(this);
+		CollisionQueryParams.AddIgnoredActor(ControlledPawn);
 
-		LastActor = ThisActor;
-		ThisActor =	Cast<IEnemyInterface>(CursorHit.GetActor());
-
-		if (ThisActor != LastActor)
+		//DrawDebugLine(ControlledPawn->GetWorld(), StartLocation, FinalLocation, FColor::Red, false, 0.1f);
+		if (GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, FinalLocation, ECC_Visibility, CollisionQueryParams))
 		{
-			if (LastActor != nullptr)
+			// The line trace hit something
+			AActor* HitActor = HitResult.GetActor();
+			FVector HitLocation = HitResult.ImpactPoint;
+
+			LastTargetActorInterface = CurrentTargetActorInterface;
+			CurrentTargetActorInterface = Cast<IEnemyInterface>(HitActor);
+
+			if (LastTargetActorInterface == nullptr)
 			{
-				LastActor->UnHighlightActor();
+				if (CurrentTargetActorInterface != nullptr)
+				{
+					CurrentTargetActorInterface->HighlightActor();
+				}
 			}
- 
-			if (ThisActor != nullptr)
+			else
 			{
-				ThisActor->HighlightActor();
+				if (CurrentTargetActorInterface == nullptr)
+				{
+					LastTargetActorInterface->UnHighlightActor();
+				}
+				else
+				{
+					if (LastTargetActorInterface != CurrentTargetActorInterface)
+					{
+						LastTargetActorInterface->UnHighlightActor();
+						CurrentTargetActorInterface->HighlightActor();
+					}
+				}
 			}
+
+			// if (LastActor != nullptr) {
+			// 	LastActor->UnHighlightActor();
+			// }
+			//
+			// if (ThisActor != nullptr && LastActor != ThisActor) {
+			// 	ThisActor->HighlightActor();
+			// }		
+
+			// Do something with the hit actor and location
+			// For example, print information to the console
+			//UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *HitActor->GetName());
+			//UE_LOG(LogTemp, Warning, TEXT("Hit Location: %s"), *HitLocation.ToString());
 		}
 	}
 }

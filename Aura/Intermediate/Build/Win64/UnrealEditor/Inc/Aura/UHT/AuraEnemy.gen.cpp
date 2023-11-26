@@ -29,6 +29,12 @@ void EmptyLinkFunctionForGeneratedCodeAuraEnemy() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bHighlight_MetaData[];
+#endif
+		static void NewProp_bHighlight_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bHighlight;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -48,6 +54,20 @@ void EmptyLinkFunctionForGeneratedCodeAuraEnemy() {}
 		{ "ModuleRelativePath", "Public/Character/AuraEnemy.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAuraEnemy_Statics::NewProp_bHighlight_MetaData[] = {
+		{ "Category", "AuraEnemy" },
+		{ "ModuleRelativePath", "Public/Character/AuraEnemy.h" },
+	};
+#endif
+	void Z_Construct_UClass_AAuraEnemy_Statics::NewProp_bHighlight_SetBit(void* Obj)
+	{
+		((AAuraEnemy*)Obj)->bHighlight = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AAuraEnemy_Statics::NewProp_bHighlight = { "bHighlight", nullptr, (EPropertyFlags)0x0020080000000004, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AAuraEnemy), &Z_Construct_UClass_AAuraEnemy_Statics::NewProp_bHighlight_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AAuraEnemy_Statics::NewProp_bHighlight_MetaData), Z_Construct_UClass_AAuraEnemy_Statics::NewProp_bHighlight_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAuraEnemy_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAuraEnemy_Statics::NewProp_bHighlight,
+	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AAuraEnemy_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UEnemyInterface_NoRegister, (int32)VTABLE_OFFSET(AAuraEnemy, IEnemyInterface), false },  // 3967763536
 		};
@@ -61,15 +81,16 @@ void EmptyLinkFunctionForGeneratedCodeAuraEnemy() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_AAuraEnemy_Statics::PropPointers,
 		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_AAuraEnemy_Statics::PropPointers),
 		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AAuraEnemy_Statics::Class_MetaDataParams), Z_Construct_UClass_AAuraEnemy_Statics::Class_MetaDataParams)
 	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AAuraEnemy_Statics::PropPointers) < 2048);
 	UClass* Z_Construct_UClass_AAuraEnemy()
 	{
 		if (!Z_Registration_Info_UClass_AAuraEnemy.OuterSingleton)
@@ -82,7 +103,6 @@ void EmptyLinkFunctionForGeneratedCodeAuraEnemy() {}
 	{
 		return AAuraEnemy::StaticClass();
 	}
-	AAuraEnemy::AAuraEnemy() {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAuraEnemy);
 	AAuraEnemy::~AAuraEnemy() {}
 	struct Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura_Source_Aura_Public_Character_AuraEnemy_h_Statics
@@ -90,9 +110,9 @@ void EmptyLinkFunctionForGeneratedCodeAuraEnemy() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura_Source_Aura_Public_Character_AuraEnemy_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AAuraEnemy, AAuraEnemy::StaticClass, TEXT("AAuraEnemy"), &Z_Registration_Info_UClass_AAuraEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAuraEnemy), 330395740U) },
+		{ Z_Construct_UClass_AAuraEnemy, AAuraEnemy::StaticClass, TEXT("AAuraEnemy"), &Z_Registration_Info_UClass_AAuraEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAuraEnemy), 1855649532U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura_Source_Aura_Public_Character_AuraEnemy_h_2581147413(TEXT("/Script/Aura"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura_Source_Aura_Public_Character_AuraEnemy_h_1229563694(TEXT("/Script/Aura"),
 		Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura_Source_Aura_Public_Character_AuraEnemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura_Source_Aura_Public_Character_AuraEnemy_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

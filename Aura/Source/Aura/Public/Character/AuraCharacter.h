@@ -18,14 +18,21 @@ class AURA_API AAuraCharacter : public AAuraCharacterBase
 
 public:
 	AAuraCharacter();
-
-	UPROPERTY(VisibleAnywhere, Category = "Camera")
-	class USpringArmComponent* CameraArm;
- 
-	UPROPERTY(VisibleAnywhere, Category = "Camera")
-	class UCameraComponent* FollowCamera;
-private:
-
+	
+	
 	UPROPERTY(EditAnywhere)
 	float RotationRate = 400.0f;
+
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void OnRep_PlayerState() override;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Camera")
+	class USpringArmComponent* CameraArm;
+ 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Camera")
+	class UCameraComponent* FollowCamera;
+
+private:
+	void InitAbilityActorInfo();
+
 };
