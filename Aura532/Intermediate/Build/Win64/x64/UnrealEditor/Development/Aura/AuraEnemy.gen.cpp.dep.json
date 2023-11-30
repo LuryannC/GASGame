@@ -1,0 +1,29 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auraenemy.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\aura\\definitions.aura.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\source\\aura\\public\\character\\auraenemy.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\source\\aura\\public\\character\\auracharacterbase.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysysteminterface.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysysteminterface.generated.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auracharacterbase.generated.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\source\\aura\\public\\interactions\\enemyinterface.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\enemyinterface.generated.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auraenemy.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

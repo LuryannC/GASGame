@@ -1,0 +1,15 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auraeffectactor.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\aura\\definitions.aura.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\source\\aura\\public\\actor\\auraeffectactor.h",
+            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auraeffectactor.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

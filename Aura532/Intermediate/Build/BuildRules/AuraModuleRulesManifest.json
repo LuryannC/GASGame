@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"Z:\\UnrealEngine\\UE5_3\\UnrealEngine\\Aura\\Source\\Aura\\Aura.Build.cs",
+		"Z:\\UnrealEngine\\UE5_3\\UnrealEngine\\Aura\\Source\\Aura.Target.cs",
+		"Z:\\UnrealEngine\\UE5_3\\UnrealEngine\\Aura\\Source\\AuraEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}
