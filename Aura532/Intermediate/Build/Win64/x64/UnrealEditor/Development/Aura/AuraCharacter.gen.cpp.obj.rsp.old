@@ -1,11 +1,11 @@
-"D:\Repositories\GASGame\Aura\Intermediate\Build\Win64\UnrealEditor\Inc\Aura\UHT\AuraCharacter.gen.cpp"
-/FI"D:\Repositories\GASGame\Aura\Intermediate\Build\Win64\x64\AuraEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
-/FI"D:\Repositories\GASGame\Aura\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\Definitions.Aura.h"
-/Yu"D:\Repositories\GASGame\Aura\Intermediate\Build\Win64\x64\AuraEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
-/Fp"D:\Repositories\GASGame\Aura\Intermediate\Build\Win64\x64\AuraEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h.pch"
-/Fo"D:\Repositories\GASGame\Aura\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\AuraCharacter.gen.cpp.obj"
-/sourceDependencies "D:\Repositories\GASGame\Aura\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\AuraCharacter.gen.cpp.dep.json"
-@"D:\Repositories\GASGame\Aura\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\Aura.Shared.rsp"
+"Z:\UnrealEngine\UE5_3\UnrealEngine\Aura\Intermediate\Build\Win64\UnrealEditor\Inc\Aura\UHT\AuraCharacter.gen.cpp"
+/FI"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
+/FI"Z:\UnrealEngine\UE5_3\UnrealEngine\Aura\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\Definitions.Aura.h"
+/Yu"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
+/Fp"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h.pch"
+/Fo"Z:\UnrealEngine\UE5_3\UnrealEngine\Aura\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\AuraCharacter.gen.cpp.obj"
+/sourceDependencies "Z:\UnrealEngine\UE5_3\UnrealEngine\Aura\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\AuraCharacter.gen.cpp.dep.json"
+@"Z:\UnrealEngine\UE5_3\UnrealEngine\Aura\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\Aura.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
@@ -48,3 +48,6 @@
 /std:c++20
 /Zc:preprocessor
 /wd5054
+/wd4005
+/wd4668
+/wd5105

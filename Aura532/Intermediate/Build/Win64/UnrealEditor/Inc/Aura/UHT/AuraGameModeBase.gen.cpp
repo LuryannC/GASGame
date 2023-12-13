@@ -80,15 +80,15 @@ void EmptyLinkFunctionForGeneratedCodeAuraGameModeBase() {}
 	AAuraGameModeBase::AAuraGameModeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAuraGameModeBase);
 	AAuraGameModeBase::~AAuraGameModeBase() {}
-	struct Z_CompiledInDeferFile_FID_Aura_Source_Aura_Public_Game_AuraGameModeBase_h_Statics
+	struct Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Game_AuraGameModeBase_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura_Source_Aura_Public_Game_AuraGameModeBase_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Game_AuraGameModeBase_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_AAuraGameModeBase, AAuraGameModeBase::StaticClass, TEXT("AAuraGameModeBase"), &Z_Registration_Info_UClass_AAuraGameModeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAuraGameModeBase), 3116762504U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura_Source_Aura_Public_Game_AuraGameModeBase_h_531190491(TEXT("/Script/Aura"),
-		Z_CompiledInDeferFile_FID_Aura_Source_Aura_Public_Game_AuraGameModeBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Aura_Source_Aura_Public_Game_AuraGameModeBase_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Game_AuraGameModeBase_h_531190491(TEXT("/Script/Aura"),
+		Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Game_AuraGameModeBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Game_AuraGameModeBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

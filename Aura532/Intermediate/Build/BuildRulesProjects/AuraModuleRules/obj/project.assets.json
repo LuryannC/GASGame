@@ -8047,11 +8047,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repositories\\GASGame\\Aura\\Intermediate\\Build\\BuildRulesProjects\\AuraModuleRules\\AuraModuleRules.csproj",
+      "projectUniqueName": "D:\\Repositories\\GASGame\\Aura532\\Intermediate\\Build\\BuildRulesProjects\\AuraModuleRules\\AuraModuleRules.csproj",
       "projectName": "AuraModuleRules",
-      "projectPath": "D:\\Repositories\\GASGame\\Aura\\Intermediate\\Build\\BuildRulesProjects\\AuraModuleRules\\AuraModuleRules.csproj",
+      "projectPath": "D:\\Repositories\\GASGame\\Aura532\\Intermediate\\Build\\BuildRulesProjects\\AuraModuleRules\\AuraModuleRules.csproj",
       "packagesPath": "C:\\Users\\luria\\.nuget\\packages\\",
-      "outputPath": "D:\\Repositories\\GASGame\\Aura\\Intermediate\\Build\\BuildRulesProjects\\AuraModuleRules\\obj\\",
+      "outputPath": "D:\\Repositories\\GASGame\\Aura532\\Intermediate\\Build\\BuildRulesProjects\\AuraModuleRules\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\luria\\AppData\\Roaming\\NuGet\\NuGet.Config",

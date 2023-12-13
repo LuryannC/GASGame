@@ -1,17 +1,17 @@
 {
-    "Version": "1.1",
+    "Version": "1.2",
     "Data": {
-        "Source": "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auraplayerstate.gen.cpp",
+        "Source": "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auraplayerstate.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "PCH": "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\x64\\auraeditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
         "Includes": [
-            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\aura\\definitions.aura.h",
-            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\source\\aura\\public\\character\\player\\auraplayerstate.h",
-            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysysteminterface.h",
-            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysysteminterface.generated.h",
-            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\source\\runtime\\engine\\classes\\gameframework\\playerstate.h",
-            "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\playerstate.generated.h",
-            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auraplayerstate.generated.h"
+            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\aura\\definitions.aura.h",
+            "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\character\\player\\auraplayerstate.h",
+            "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysysteminterface.h",
+            "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysysteminterface.generated.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\playerstate.h",
+            "d:\\epicgames\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\playerstate.generated.h",
+            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auraplayerstate.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -1,11 +1,11 @@
 {
-    "Version": "1.1",
+    "Version": "1.2",
     "Data": {
-        "Source": "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\aura.init.gen.cpp",
+        "Source": "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\aura.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "z:\\unrealengine\\ue5_3\\unrealengine\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "PCH": "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\x64\\auraeditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
         "Includes": [
-            "z:\\unrealengine\\ue5_3\\unrealengine\\aura\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\aura\\definitions.aura.h"
+            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\aura\\definitions.aura.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

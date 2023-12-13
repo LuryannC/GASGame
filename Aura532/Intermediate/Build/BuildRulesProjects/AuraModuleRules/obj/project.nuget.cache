@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LtlEtQ5baW9kcD6hHSYq9gBVHyC0Bic5H25YNDcdsiqJ2F50nKeWAR+tYuh3W4eou1X9zt370MXwwV/+cy9fUQ==",
+  "dgSpecHash": "NnmHQXKNQGei2rsUEBDRkdhgIpGMLikay3z1ThvTr7cLtApaAlCEj0ipu7cVHb5XJ3pvfVWPVGT+NWq2mnjgSQ==",
   "success": true,
-  "projectFilePath": "D:\\Repositories\\GASGame\\Aura\\Intermediate\\Build\\BuildRulesProjects\\AuraModuleRules\\AuraModuleRules.csproj",
+  "projectFilePath": "D:\\Repositories\\GASGame\\Aura532\\Intermediate\\Build\\BuildRulesProjects\\AuraModuleRules\\AuraModuleRules.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luria\\.nuget\\packages\\blake3\\0.5.1\\blake3.0.5.1.nupkg.sha512",
     "C:\\Users\\luria\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
