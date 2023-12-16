@@ -19,11 +19,6 @@ struct FEffectProperties
 	GENERATED_BODY()
 	
 	FEffectProperties(){}
-	FEffectProperties(UAbilitySystemComponent* AbilitySystemComponent, AActor* AvatarActor,	AController* Controller, ACharacter* Character,	FGameplayEffectContextHandle GameplayEffectContextHandle);
-
-	// Source
-	
-	//FGameplayEffectContextHandle GameplayEffectContextHandle;
 
 	UPROPERTY()
 	UAbilitySystemComponent* AbilitySystemComponent = nullptr;
@@ -36,38 +31,14 @@ struct FEffectProperties
 
 	UPROPERTY()
 	ACharacter* Character = nullptr;
-
-	// UPROPERTY()
-	// UAbilitySystemComponent* SourceAbilitySystemComponent = nullptr;
-	//
-	// UPROPERTY()
-	// AActor* SourceAvatarActor = nullptr;
-	//
-	// UPROPERTY()
-	// AController* SourceController = nullptr;
-	//
-	// UPROPERTY()
-	// ACharacter* SourceCharacter = nullptr;
-	//
-	// // Target
-	//
-	// UPROPERTY()
-	// UAbilitySystemComponent* TargetAbilitySystemComponent = nullptr;
-	//
-	// UPROPERTY()
-	// AActor* TargetAvatarActor = nullptr;
-	//
-	// UPROPERTY()
-	// AController* TargetController = nullptr;
-	//
-	// UPROPERTY()
-	// ACharacter* TargetCharacter = nullptr;
 };
 
 USTRUCT()
 struct FPropertiesOwners
 {
 	GENERATED_BODY()
+
+	FPropertiesOwners(){}
 	
 	FGameplayEffectContextHandle GameplayEffectContextHandle;
 	

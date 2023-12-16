@@ -39,43 +39,6 @@ void UAuraAttributeSet::PreAttributeChange(const FGameplayAttribute& Attribute, 
 	}
 }
 
-// void UAuraAttributeSet::SetEffectProperties(const FGameplayEffectModCallbackData& Data, FEffectProperties& Properties) const
-// {
-// 	// Soource = Causer of the effect, Target = Target of the effect (owner of this attribute set)	
-//
-// 	Properties.GameplayEffectContextHandle = Data.EffectSpec.GetContext();		
-// 	Properties.SourceAbilitySystemComponent = Properties.GameplayEffectContextHandle.GetOriginalInstigatorAbilitySystemComponent();
-// 	
-// 	if (IsValid(Properties.SourceAbilitySystemComponent)
-// 		&& Properties.SourceAbilitySystemComponent->AbilityActorInfo.IsValid()
-// 		&& Properties.SourceAbilitySystemComponent->AbilityActorInfo->AvatarActor.IsValid())
-// 	{
-// 		Properties.SourceAvatarActor = Properties.SourceAbilitySystemComponent->AbilityActorInfo->AvatarActor.Get();
-// 		Properties.SourceController =  Properties.SourceAbilitySystemComponent->AbilityActorInfo->PlayerController.Get();
-// 		
-// 		if (Properties.SourceController == nullptr && Properties.SourceAvatarActor != nullptr)
-// 		{
-// 			if (const APawn* Pawn = Cast<APawn>(Properties.SourceAvatarActor))
-// 			{
-// 				Properties.SourceController = Pawn->GetController();
-// 			}
-// 		}
-// 		if (Properties.SourceController)
-// 		{
-// 			Properties.SourceCharacter = Cast<ACharacter>(Properties.SourceController->GetPawn());
-// 		}
-// 	}
-// 		
-// 	// Get Target ASC
-//
-// 	if (Data.Target.AbilityActorInfo.IsValid() && Data.Target.AbilityActorInfo->AvatarActor.IsValid())
-// 	{
-// 		Properties.TargetAvatarActor = Data.Target.AbilityActorInfo->AvatarActor.Get();	
-// 		Properties.TargetController = Data.Target.AbilityActorInfo->PlayerController.Get();
-// 		Properties.TargetCharacter = Cast<ACharacter>(Properties.TargetAvatarActor);
-// 		Properties.TargetAbilitySystemComponent = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(Properties.TargetAvatarActor);
-// 	}
-// }
 
 void UAuraAttributeSet::SetEffectProperties(const FGameplayEffectModCallbackData& Data,
 	FPropertiesOwners& PropertiesOwners) const
