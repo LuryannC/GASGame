@@ -31,4 +31,6 @@ protected:
 	
 	UPROPERTY(BlueprintReadWrite)
 	bool bHighlight = false;
+
+	virtual void InitAbilityActorInfo() override;
 };

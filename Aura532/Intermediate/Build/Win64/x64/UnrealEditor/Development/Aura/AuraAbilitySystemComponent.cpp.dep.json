@@ -3,7 +3,7 @@
     "Data": {
         "Source": "d:\\repositories\\gasgame\\aura532\\source\\aura\\private\\abilitysystem\\auraabilitysystemcomponent.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\x64\\auraeditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "PCH": "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\x64\\auraeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
         "Includes": [
             "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\aura\\definitions.aura.h",
             "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\abilitysystem\\auraabilitysystemcomponent.h",
@@ -14,6 +14,11 @@
             "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\attributeset.h",
             "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\attributeset.generated.h",
             "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayprediction.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\net\\core\\classes\\net\\serialization\\fastarrayserializer.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\net\\core\\public\\net\\core\\misc\\guidreferences.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\net\\core\\public\\net\\core\\pushmodel\\pushmodel.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\net\\core\\public\\net\\core\\netcoremodule.h",
+            "d:\\epicgames\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\netcore\\uht\\fastarrayserializer.generated.h",
             "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplayprediction.generated.h",
             "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplaycueinterface.h",
             "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayeffecttypes.h",

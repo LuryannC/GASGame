@@ -3,7 +3,7 @@
     "Data": {
         "Source": "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auracharacter.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\x64\\auraeditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "PCH": "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\x64\\auraeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
         "Includes": [
             "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\aura\\definitions.aura.h",
             "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\character\\auracharacter.h",
