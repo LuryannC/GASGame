@@ -38,7 +38,11 @@ template<> AURA_API UScriptStruct* StaticStruct<struct FPropertiesOwners>();
 	DECLARE_FUNCTION(execOnRep_MaxMana); \
 	DECLARE_FUNCTION(execOnRep_Mana); \
 	DECLARE_FUNCTION(execOnRep_MaxHealth); \
-	DECLARE_FUNCTION(execOnRep_Health);
+	DECLARE_FUNCTION(execOnRep_Health); \
+	DECLARE_FUNCTION(execOnRep_Vigor); \
+	DECLARE_FUNCTION(execOnRep_Resilience); \
+	DECLARE_FUNCTION(execOnRep_Intelligence); \
+	DECLARE_FUNCTION(execOnRep_Strength);
 
 
 #define FID_Repositories_GASGame_Aura532_Source_Aura_Public_AbilitySystem_AuraAttributeSet_h_59_ACCESSORS
@@ -52,7 +56,11 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		Health=NETFIELD_REP_START, \
+		Strength=NETFIELD_REP_START, \
+		Intelligence, \
+		Resilience, \
+		Vigor, \
+		Health, \
 		MaxHealth, \
 		Mana, \
 		MaxMana, \
