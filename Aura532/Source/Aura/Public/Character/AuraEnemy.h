@@ -19,11 +19,14 @@ public:
 
 	AAuraEnemy();
 
-	// Enemy interface
+	/** Enemy interface */
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
-	//
+	/** end Enemy interface */
 
+	/** Combat Interface */
+	virtual int32 GetPlayerLevel() override;
+	/** end Combat interface */
 	
 protected:
 	virtual void BeginPlay() override;
@@ -33,4 +36,11 @@ protected:
 	bool bHighlight = false;
 
 	virtual void InitAbilityActorInfo() override;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Character Class Defaults")
+	int32 Level = 1;
+
+private:
+
+
 };

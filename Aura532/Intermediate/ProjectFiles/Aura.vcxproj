@@ -396,8 +396,8 @@
     <ClCompile_ForcedIncludeFiles_4>$(SolutionDir)Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Definitions.h</ClCompile_ForcedIncludeFiles_4>
     <ClCompile_ForcedIncludeFiles_5>$(SolutionDir)Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Definitions.h</ClCompile_ForcedIncludeFiles_5>
     <ClCompile_ForcedIncludeFiles_6>$(SolutionDir)Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Definitions.h</ClCompile_ForcedIncludeFiles_6>
-    <ClCompile_ForcedIncludeFiles_7>$(SolutionDir)Intermediate\Build\Win64\x64\AuraEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h;$(SolutionDir)Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\Definitions.Aura.h</ClCompile_ForcedIncludeFiles_7>
-    <ClCompile_AdditionalOptions>$(AdditionalOptions) /Yu"$(SolutionDir)Intermediate\Build\Win64\x64\AuraEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"</ClCompile_AdditionalOptions>
+    <ClCompile_ForcedIncludeFiles_7>$(SolutionDir)Intermediate\Build\Win64\x64\AuraEditor\Development\Engine\SharedPCH.Engine.Cpp20.h;$(SolutionDir)Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\Definitions.Aura.h</ClCompile_ForcedIncludeFiles_7>
+    <ClCompile_AdditionalOptions>$(AdditionalOptions) /Yu"$(SolutionDir)Intermediate\Build\Win64\x64\AuraEditor\Development\Engine\SharedPCH.Engine.Cpp20.h"</ClCompile_AdditionalOptions>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\Aura.uproject"/>
@@ -407,6 +407,7 @@
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
+    <None Include="..\..\Config\DefaultGameplayTags.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\RD.Build.cs"/>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\RD.cpp">
@@ -1103,6 +1104,16 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_7)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\ModMagCalc\MMC_MaxHealth.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_7)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\AbilitySystem\ModMagCalc\MMC_MaxMana.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_7)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Aura\Private\Actor\AuraEffectActor.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_7)</ForcedIncludeFiles>
@@ -1138,6 +1149,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_7)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Aura\Private\Interactions\CombatInterface.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_7)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Aura\Private\Interactions\EnemyInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_7)</ForcedIncludeFiles>
@@ -1165,6 +1181,8 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Aura\Public\AbilitySystem\AuraAbilitySystemComponent.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\AbilitySystem\AuraAttributeSet.h"/>
+    <ClInclude Include="..\..\Source\Aura\Public\AbilitySystem\ModMagCalc\MMC_MaxHealth.h"/>
+    <ClInclude Include="..\..\Source\Aura\Public\AbilitySystem\ModMagCalc\MMC_MaxMana.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\Actor\AuraEffectActor.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\Character\AuraCharacter.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\Character\AuraCharacterBase.h"/>
@@ -1172,6 +1190,7 @@
     <ClInclude Include="..\..\Source\Aura\Public\Character\Player\AuraPlayerController.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\Character\Player\AuraPlayerState.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\Game\AuraGameModeBase.h"/>
+    <ClInclude Include="..\..\Source\Aura\Public\Interactions\CombatInterface.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\Interactions\EnemyInterface.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\UI\HUD\AuraHUD.h"/>
     <ClInclude Include="..\..\Source\Aura\Public\UI\Widget\AuraUserWidget.h"/>
