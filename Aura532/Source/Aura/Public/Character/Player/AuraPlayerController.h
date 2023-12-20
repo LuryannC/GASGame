@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "InputActionValue.h"
 #include "GameFramework/PlayerController.h"
 #include "AuraPlayerController.generated.h"
 
@@ -28,6 +29,10 @@ protected:
 	virtual void BeginPlay() override;
 
 	virtual void SetupInputComponent() override;
+	
+	UFUNCTION(BlueprintNativeEvent)
+	void OpenAttributeMenu(const FInputActionValue& ActionValue);
+
 
 private:
 	UPROPERTY(EditAnywhere, Category="Input")
@@ -38,13 +43,16 @@ private:
 
 	UPROPERTY(EditAnywhere, Category="Input")
 	TObjectPtr<UInputAction> RotateAction;
+	
+	UPROPERTY(EditAnywhere, Category="Input")
+	TObjectPtr<UInputAction> OpenAttributeMenuAction;
 
 	void Move(const FInputActionValue& ActionValue);
 	void RotateCamera(const FInputActionValue& ActionValue);
 
 	void CursorTrace();
-	TObjectPtr<IEnemyInterface> LastTargetActorInterface;
-	TObjectPtr<IEnemyInterface> CurrentTargetActorInterface;
+	IEnemyInterface* LastTargetActorInterface;
+	IEnemyInterface* CurrentTargetActorInterface;
 
 	UPROPERTY(EditAnywhere)
 	float TraceDistance = 200.0;

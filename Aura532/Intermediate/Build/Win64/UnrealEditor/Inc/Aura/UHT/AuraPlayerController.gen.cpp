@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Aura/Public/Character/Player/AuraPlayerController.h"
+#include "InputActionValue.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeAuraPlayerController() {}
 // Cross Module References
@@ -14,10 +15,73 @@ void EmptyLinkFunctionForGeneratedCodeAuraPlayerController() {}
 	ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 	ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 	ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
+	ENHANCEDINPUT_API UScriptStruct* Z_Construct_UScriptStruct_FInputActionValue();
 	UPackage* Z_Construct_UPackage__Script_Aura();
 // End Cross Module References
+	DEFINE_FUNCTION(AAuraPlayerController::execOpenAttributeMenu)
+	{
+		P_GET_STRUCT_REF(FInputActionValue,Z_Param_Out_ActionValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OpenAttributeMenu_Implementation(Z_Param_Out_ActionValue);
+		P_NATIVE_END;
+	}
+	struct AuraPlayerController_eventOpenAttributeMenu_Parms
+	{
+		FInputActionValue ActionValue;
+	};
+	static FName NAME_AAuraPlayerController_OpenAttributeMenu = FName(TEXT("OpenAttributeMenu"));
+	void AAuraPlayerController::OpenAttributeMenu(FInputActionValue const& ActionValue)
+	{
+		AuraPlayerController_eventOpenAttributeMenu_Parms Parms;
+		Parms.ActionValue=ActionValue;
+		ProcessEvent(FindFunctionChecked(NAME_AAuraPlayerController_OpenAttributeMenu),&Parms);
+	}
 	void AAuraPlayerController::StaticRegisterNativesAAuraPlayerController()
 	{
+		UClass* Class = AAuraPlayerController::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "OpenAttributeMenu", &AAuraPlayerController::execOpenAttributeMenu },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ActionValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ActionValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::NewProp_ActionValue_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::NewProp_ActionValue = { "ActionValue", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AuraPlayerController_eventOpenAttributeMenu_Parms, ActionValue), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::NewProp_ActionValue_MetaData), Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::NewProp_ActionValue_MetaData) }; // 1693336646
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::NewProp_ActionValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Character/Player/AuraPlayerController.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAuraPlayerController, nullptr, "OpenAttributeMenu", nullptr, nullptr, Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::PropPointers), sizeof(AuraPlayerController_eventOpenAttributeMenu_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08480C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::Function_MetaDataParams), Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::PropPointers) < 2048);
+	static_assert(sizeof(AuraPlayerController_eventOpenAttributeMenu_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AAuraPlayerController);
 	UClass* Z_Construct_UClass_AAuraPlayerController_NoRegister()
@@ -27,6 +91,7 @@ void EmptyLinkFunctionForGeneratedCodeAuraPlayerController() {}
 	struct Z_Construct_UClass_AAuraPlayerController_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -43,6 +108,10 @@ void EmptyLinkFunctionForGeneratedCodeAuraPlayerController() {}
 #endif
 		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_RotateAction;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_OpenAttributeMenuAction_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_OpenAttributeMenuAction;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_TraceDistance_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_TraceDistance;
@@ -55,6 +124,10 @@ void EmptyLinkFunctionForGeneratedCodeAuraPlayerController() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Aura,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AAuraPlayerController_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_AAuraPlayerController_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AAuraPlayerController_OpenAttributeMenu, "OpenAttributeMenu" }, // 1250570361
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AAuraPlayerController_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAuraPlayerController_Statics::Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
@@ -87,6 +160,13 @@ void EmptyLinkFunctionForGeneratedCodeAuraPlayerController() {}
 #endif
 	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_RotateAction = { "RotateAction", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAuraPlayerController, RotateAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_RotateAction_MetaData), Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_RotateAction_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_OpenAttributeMenuAction_MetaData[] = {
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Public/Character/Player/AuraPlayerController.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_OpenAttributeMenuAction = { "OpenAttributeMenuAction", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAuraPlayerController, OpenAttributeMenuAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_OpenAttributeMenuAction_MetaData), Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_OpenAttributeMenuAction_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_TraceDistance_MetaData[] = {
 		{ "Category", "AuraPlayerController" },
 		{ "ModuleRelativePath", "Public/Character/Player/AuraPlayerController.h" },
@@ -97,6 +177,7 @@ void EmptyLinkFunctionForGeneratedCodeAuraPlayerController() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_AuraContext,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_MoveAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_RotateAction,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_OpenAttributeMenuAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAuraPlayerController_Statics::NewProp_TraceDistance,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AAuraPlayerController_Statics::StaticCppClassTypeInfo = {
@@ -107,11 +188,11 @@ void EmptyLinkFunctionForGeneratedCodeAuraPlayerController() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AAuraPlayerController_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AAuraPlayerController_Statics::PropPointers),
 		0,
 		0x009002A4u,
@@ -137,9 +218,9 @@ void EmptyLinkFunctionForGeneratedCodeAuraPlayerController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Character_Player_AuraPlayerController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AAuraPlayerController, AAuraPlayerController::StaticClass, TEXT("AAuraPlayerController"), &Z_Registration_Info_UClass_AAuraPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAuraPlayerController), 314075064U) },
+		{ Z_Construct_UClass_AAuraPlayerController, AAuraPlayerController::StaticClass, TEXT("AAuraPlayerController"), &Z_Registration_Info_UClass_AAuraPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAuraPlayerController), 1067912963U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Character_Player_AuraPlayerController_h_2352868166(TEXT("/Script/Aura"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Character_Player_AuraPlayerController_h_3234059442(TEXT("/Script/Aura"),
 		Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Character_Player_AuraPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Character_Player_AuraPlayerController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

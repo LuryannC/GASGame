@@ -54,7 +54,9 @@ void AAuraPlayerController::SetupInputComponent()
 	EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAuraPlayerController::Move);
 
 	// Rotate Camera
-	EnhancedInputComponent->BindAction(RotateAction,ETriggerEvent::Triggered, this, &AAuraPlayerController::RotateCamera);	
+	EnhancedInputComponent->BindAction(RotateAction,ETriggerEvent::Triggered, this, &AAuraPlayerController::RotateCamera);
+
+	EnhancedInputComponent->BindAction(OpenAttributeMenuAction, ETriggerEvent::Triggered, this,&AAuraPlayerController::OpenAttributeMenu);
 }
 
 void AAuraPlayerController::Move(const FInputActionValue& ActionValue)
@@ -82,6 +84,10 @@ void AAuraPlayerController::RotateCamera(const FInputActionValue& ActionValue)
 		ControlledPawn->AddControllerYawInput(InputValue.X);
 		ControlledPawn->AddControllerPitchInput(InputValue.Y*-1.0f);
 	}
+}
+
+void AAuraPlayerController::OpenAttributeMenu_Implementation(const FInputActionValue& ActionValue)
+{
 }
 
 void AAuraPlayerController::CursorTrace()
