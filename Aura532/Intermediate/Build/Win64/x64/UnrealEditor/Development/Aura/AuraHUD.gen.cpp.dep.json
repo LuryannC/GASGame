@@ -12,7 +12,6 @@
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\debugtextinfo.h",
             "d:\\epicgames\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\debugtextinfo.generated.h",
             "d:\\epicgames\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\hud.generated.h",
-            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\aurahud.generated.h",
             "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\ui\\widgetcontroller\\aurawidgetcontroller.h",
             "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysystemcomponent.h",
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
@@ -79,7 +78,8 @@
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
-            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\aurawidgetcontroller.generated.h"
+            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\aurawidgetcontroller.generated.h",
+            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\aurahud.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

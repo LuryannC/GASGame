@@ -11,6 +11,7 @@
 #include "Character/Player/AuraPlayerState.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "UI/HUD/AuraHUD.h"
+#include "UI/WidgetController/OverlayWidgetController.h"
 
 AAuraCharacter::AAuraCharacter()
 {
@@ -74,6 +75,10 @@ void AAuraCharacter::InitAbilityActorInfo()
 			if (AAuraHUD* AuraHUD = Cast<AAuraHUD>(AuraPlayerController->GetHUD()))
 			{
 				AuraHUD->InitOverlay(AuraPlayerController, AuraPlayerState, AbilitySystemComponent, AttributesSet);
+				AuraHUD->InitAttributeMenu(AuraPlayerController, AuraPlayerState, AbilitySystemComponent, AttributesSet);
+				// const FWidgetControllerParams WidgetControllerParams(AuraPlayerController, AuraPlayerState, AbilitySystemComponent, AttributesSet);
+				// AuraHUD->OverlayWidgetStruct = FWidgetControllerRefs(*AuraHUD->GetOverlayWidget(), AuraHUD->GetOverlayWidgetClass(), AuraHUD->GetOverlayWidgetController(), AuraHUD->GetOverlayWidgetControllerClass());
+				// AuraHUD->InitWidget(WidgetControllerParams, AuraHUD->OverlayWidgetStruct, true);
 			}
 		}
 

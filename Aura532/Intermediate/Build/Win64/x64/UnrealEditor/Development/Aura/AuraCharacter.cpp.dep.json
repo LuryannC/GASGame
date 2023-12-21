@@ -87,6 +87,8 @@
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
             "d:\\epicgames\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\cameracomponent.generated.h",
             "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\character\\player\\auraplayercontroller.h",
+            "d:\\epicgames\\ue_5.3\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
+            "d:\\epicgames\\ue_5.3\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
             "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auraplayercontroller.generated.h",
             "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\character\\player\\auraplayerstate.h",
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\playerstate.h",
@@ -116,7 +118,18 @@
             "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\debugtextinfo.h",
             "d:\\epicgames\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\debugtextinfo.generated.h",
             "d:\\epicgames\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\hud.generated.h",
-            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\aurahud.generated.h"
+            "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\ui\\widgetcontroller\\aurawidgetcontroller.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\serialization\\testundeclaredscriptstructobjectreferences.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
+            "d:\\epicgames\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
+            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\aurawidgetcontroller.generated.h",
+            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\aurahud.generated.h",
+            "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\ui\\widgetcontroller\\overlaywidgetcontroller.h",
+            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\overlaywidgetcontroller.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
