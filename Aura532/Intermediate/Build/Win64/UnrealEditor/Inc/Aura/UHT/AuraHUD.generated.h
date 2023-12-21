@@ -14,13 +14,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define AURA_AuraHUD_generated_h
 
-#define FID_Repositories_GASGame_Aura532_Source_Aura_Public_UI_HUD_AuraHUD_h_20_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FWidgetControllerRefs_Statics; \
-	AURA_API static class UScriptStruct* StaticStruct();
-
-
-template<> AURA_API UScriptStruct* StaticStruct<struct FWidgetControllerRefs>();
-
 #define FID_Repositories_GASGame_Aura532_Source_Aura_Public_UI_HUD_AuraHUD_h_46_SPARSE_DATA
 #define FID_Repositories_GASGame_Aura532_Source_Aura_Public_UI_HUD_AuraHUD_h_46_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Repositories_GASGame_Aura532_Source_Aura_Public_UI_HUD_AuraHUD_h_46_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS

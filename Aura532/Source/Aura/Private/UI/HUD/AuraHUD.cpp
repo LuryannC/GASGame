@@ -7,18 +7,6 @@
 #include "UI/WidgetController/AttributeMenuWidgetController.h"
 #include "UI/WidgetController/OverlayWidgetController.h"
 
-// UOverlayWidgetController* AAuraHUD::GetOverlayWidgetController(const FWidgetControllerParams& WCParams)
-// {
-// 	if (OverlayWidgetController == nullptr)
-// 	{
-// 		OverlayWidgetController = NewObject<UOverlayWidgetController>(this, OverlayWidgetControllerClass);
-// 		OverlayWidgetController->SetWidgetControllerParams(WCParams);
-// 		OverlayWidgetController->BindCallbacksToDependencies();
-//
-// 		return OverlayWidgetController;
-// 	}
-// 	return OverlayWidgetController;
-// }
 
 UAuraWidgetController* AAuraHUD::GetWidgetController(UAuraWidgetController* WidgetController, TSubclassOf<UAuraWidgetController> WidgetControllerClass,
 	const FWidgetControllerParams& WCParams)
@@ -28,10 +16,31 @@ UAuraWidgetController* AAuraHUD::GetWidgetController(UAuraWidgetController* Widg
 		WidgetController = NewObject<UAuraWidgetController>(this, WidgetControllerClass);
 		WidgetController->SetWidgetControllerParams(WCParams);
 		WidgetController->BindCallbacksToDependencies();
-
-		return WidgetController;
 	}
 	return WidgetController;
+}
+
+
+UOverlayWidgetController* AAuraHUD::GetOverlayWidgetController(const FWidgetControllerParams& WCParams)
+{
+	if (OverlayWidgetController == nullptr)
+	{
+		OverlayWidgetController = NewObject<UOverlayWidgetController>(this, OverlayWidgetControllerClass);
+		OverlayWidgetController->SetWidgetControllerParams(WCParams);
+		OverlayWidgetController->BindCallbacksToDependencies();
+	}
+	return OverlayWidgetController;
+}
+
+UAttributeMenuWidgetController* AAuraHUD::GetAttributeMenuWidgetController(const FWidgetControllerParams& WCParams)
+{
+	if (AttributeMenuWidgetController == nullptr)
+	{
+		AttributeMenuWidgetController = NewObject<UAttributeMenuWidgetController>(this, AttributeMenuWidgetControllerClass);
+		AttributeMenuWidgetController->SetWidgetControllerParams(WCParams);
+		AttributeMenuWidgetController->BindCallbacksToDependencies();
+	}
+	return AttributeMenuWidgetController;
 }
 
 void AAuraHUD::InitOverlay(APlayerController* PlayerController, APlayerState* PlayerState,
@@ -53,37 +62,18 @@ void AAuraHUD::InitOverlay(APlayerController* PlayerController, APlayerState* Pl
 	Widget->AddToViewport();
 }
 
-void AAuraHUD::InitAttributeMenu(APlayerController* PlayerController, APlayerState* PlayerState,
-	UAbilitySystemComponent* AbilitySystemComponent, UAttributeSet* AttributeSet)
-{
-	checkf(AttributeMenuWidgetControllerClass, TEXT("Attribute Menu Widget Controller Class unitialized, please fill out BP_AuraHUD"));
-	
-	const FWidgetControllerParams WidgetControllerParams(PlayerController, PlayerState, AbilitySystemComponent, AttributeSet);
-	UAttributeMenuWidgetController* AMWidgetController = Cast<UAttributeMenuWidgetController>(GetWidgetController(AttributeMenuWidgetController, AttributeMenuWidgetControllerClass, WidgetControllerParams));
-
-	AttributeMenuWidget->SetWidgetController(AMWidgetController);
-	AMWidgetController->BroadcastInitialValues();
-}
-
-// void AAuraHUD::InitWidget(const FWidgetControllerParams& WidgetControllerParams,
-//                               FWidgetControllerRefs& WidgetControllerRefs, const bool bAddToViewport)
+// void AAuraHUD::InitAttributeMenu(APlayerController* PlayerController, APlayerState* PlayerState,
+// 	UAbilitySystemComponent* AbilitySystemComponent, UAttributeSet* AttributeSet)
 // {
-// 	checkf(WidgetControllerRefs.WidgetClass, TEXT("[%s] Widget Class unitialized, please fill out BP_AuraHUD"), *WidgetControllerRefs.WidgetClass->GetName());
-// 	checkf(WidgetControllerRefs.WidgetControllerClass, TEXT("[%s] Widget Controller Class unitialized, please fill out BP_AuraHUD"), *WidgetControllerRefs.WidgetControllerClass->GetName());
-//
-// 	// Create Widget
-// 	UUserWidget* Widget = CreateWidget<UUserWidget>(GetWorld(), WidgetControllerRefs.WidgetClass);
-// 	WidgetControllerRefs.Widget = Cast<UAuraUserWidget>(Widget);
+// 	checkf(AttributeMenuWidgetControllerClass, TEXT("Attribute Menu Widget Controller Class unitialized, please fill out BP_AuraHUD"));
 // 	
-// 	UOverlayWidgetController* WidgetController = Cast<UOverlayWidgetController>(GetWidgetController(WidgetControllerRefs.WidgetController, WidgetControllerRefs.WidgetControllerClass, WidgetControllerParams));
+// 	const FWidgetControllerParams WidgetControllerParams(PlayerController, PlayerState, AbilitySystemComponent, AttributeSet);
 //
-// 	// After this happens we can tell the delegates to init the initial values
-// 	WidgetControllerRefs.Widget->SetWidgetController(WidgetController);
-// 	WidgetController->BroadcastInitialValues();
-// 	
-// 	if (bAddToViewport)
+// 	if (UAttributeMenuWidgetController* AMWidgetController = Cast<UAttributeMenuWidgetController>(GetWidgetController(AttributeMenuWidgetController, AttributeMenuWidgetControllerClass, WidgetControllerParams)))
 // 	{
-// 		Widget->AddToViewport();	
-// 	}	
+// 		AttributeMenuWidget->SetWidgetController(AMWidgetController);
+// 		AMWidgetController->BroadcastInitialValues();
+// 	}
 // }
+
 

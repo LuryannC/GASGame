@@ -7,6 +7,7 @@
 #include "UObject/GeneratedCppIncludes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeAura_init() {}
+	AURA_API UFunction* Z_Construct_UDelegateFunction_Aura_AttributeInfoSignature__DelegateSignature();
 	AURA_API UFunction* Z_Construct_UDelegateFunction_Aura_MessageWidgetRowSignature__DelegateSignature();
 	AURA_API UFunction* Z_Construct_UDelegateFunction_Aura_OnAttributeChangedSignature__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_Aura;
@@ -15,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeAura_init() {}
 		if (!Z_Registration_Info_UPackage__Script_Aura.OuterSingleton)
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_Aura_AttributeInfoSignature__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_Aura_MessageWidgetRowSignature__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_Aura_OnAttributeChangedSignature__DelegateSignature,
 			};
@@ -23,13 +25,13 @@ void EmptyLinkFunctionForGeneratedCodeAura_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xE47C9751,
-				0xAF33DA37,
+				0xA659F2D7,
+				0xD536E9ED,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Aura.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Aura.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Aura(Z_Construct_UPackage__Script_Aura, TEXT("/Script/Aura"), Z_Registration_Info_UPackage__Script_Aura, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xE47C9751, 0xAF33DA37));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Aura(Z_Construct_UPackage__Script_Aura, TEXT("/Script/Aura"), Z_Registration_Info_UPackage__Script_Aura, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xA659F2D7, 0xD536E9ED));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -52,16 +52,14 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	TObjectPtr<UAuraUserWidget> AttributeMenuWidget;	
 
-	//UFUNCTION(BlueprintCallable)
-	//UOverlayWidgetController* GetOverlayWidgetController(const FWidgetControllerParams& WCParams);
-
 	UAuraWidgetController* GetWidgetController(UAuraWidgetController* WidgetController, TSubclassOf<UAuraWidgetController> WidgetControllerClass, const FWidgetControllerParams& WCParams);
 
 	void InitOverlay(APlayerController* PlayerController, APlayerState* PlayerState, UAbilitySystemComponent* AbilitySystemComponent, UAttributeSet* AttributeSet);
 
-	void InitAttributeMenu(APlayerController* PlayerController, APlayerState* PlayerState, UAbilitySystemComponent* AbilitySystemComponent, UAttributeSet* AttributeSet);
+	UOverlayWidgetController* GetOverlayWidgetController(const FWidgetControllerParams& WCParams);
+	UAttributeMenuWidgetController* GetAttributeMenuWidgetController(const FWidgetControllerParams& WCParams);
 
-	//void InitWidget(const FWidgetControllerParams& WidgetControllerParams, FWidgetControllerRefs& WidgetControllerRefs, bool bAddToViewport);
+	//void InitAttributeMenu(APlayerController* PlayerController, APlayerState* PlayerState, UAbilitySystemComponent* AbilitySystemComponent, UAttributeSet* AttributeSet);
 
 protected:
 
