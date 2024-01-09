@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Aura/Public/AbilitySystem/Data/AttributeInfo.h"
+#include "AttributeSet.h"
 #include "GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeAttributeInfo() {}
@@ -14,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeAttributeInfo() {}
 	AURA_API UClass* Z_Construct_UClass_UAttributeInfo_NoRegister();
 	AURA_API UScriptStruct* Z_Construct_UScriptStruct_FAuraAttributeInfo();
 	ENGINE_API UClass* Z_Construct_UClass_UDataAsset();
+	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAttribute();
 	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 	UPackage* Z_Construct_UPackage__Script_Aura();
 // End Cross Module References
@@ -52,6 +54,10 @@ template<> AURA_API UScriptStruct* StaticStruct<FAuraAttributeInfo>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_AttributeValue_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_AttributeValue;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AttributeGetter_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_AttributeGetter;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -93,11 +99,19 @@ template<> AURA_API UScriptStruct* StaticStruct<FAuraAttributeInfo>()
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeValue = { "AttributeValue", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FAuraAttributeInfo, AttributeValue), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeValue_MetaData), Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeValue_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeGetter_MetaData[] = {
+		{ "Category", "AuraAttributeInfo" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/Data/AttributeInfo.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeGetter = { "AttributeGetter", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FAuraAttributeInfo, AttributeGetter), Z_Construct_UScriptStruct_FGameplayAttribute, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeGetter_MetaData), Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeGetter_MetaData) }; // 359123813
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeTag,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeName,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeDescription,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeValue,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewProp_AttributeGetter,
 	};
 	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_Aura,
@@ -158,14 +172,14 @@ template<> AURA_API UScriptStruct* StaticStruct<FAuraAttributeInfo>()
 		{ "ModuleRelativePath", "Public/AbilitySystem/Data/AttributeInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos_Inner = { "AttributeInfos", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FAuraAttributeInfo, METADATA_PARAMS(0, nullptr) }; // 2369328327
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos_Inner = { "AttributeInfos", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FAuraAttributeInfo, METADATA_PARAMS(0, nullptr) }; // 1311522023
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos_MetaData[] = {
 		{ "Category", "AttributeInfo" },
 		{ "ModuleRelativePath", "Public/AbilitySystem/Data/AttributeInfo.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos = { "AttributeInfos", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAttributeInfo, AttributeInfos), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos_MetaData), Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos_MetaData) }; // 2369328327
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos = { "AttributeInfos", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAttributeInfo, AttributeInfos), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos_MetaData), Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos_MetaData) }; // 1311522023
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UAttributeInfo_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAttributeInfo_Statics::NewProp_AttributeInfos,
@@ -210,12 +224,12 @@ template<> AURA_API UScriptStruct* StaticStruct<FAuraAttributeInfo>()
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_AbilitySystem_Data_AttributeInfo_h_Statics::ScriptStructInfo[] = {
-		{ FAuraAttributeInfo::StaticStruct, Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewStructOps, TEXT("AuraAttributeInfo"), &Z_Registration_Info_UScriptStruct_AuraAttributeInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAuraAttributeInfo), 2369328327U) },
+		{ FAuraAttributeInfo::StaticStruct, Z_Construct_UScriptStruct_FAuraAttributeInfo_Statics::NewStructOps, TEXT("AuraAttributeInfo"), &Z_Registration_Info_UScriptStruct_AuraAttributeInfo, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAuraAttributeInfo), 1311522023U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_AbilitySystem_Data_AttributeInfo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UAttributeInfo, UAttributeInfo::StaticClass, TEXT("UAttributeInfo"), &Z_Registration_Info_UClass_UAttributeInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAttributeInfo), 3672409708U) },
+		{ Z_Construct_UClass_UAttributeInfo, UAttributeInfo::StaticClass, TEXT("UAttributeInfo"), &Z_Registration_Info_UClass_UAttributeInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAttributeInfo), 4003117099U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_AbilitySystem_Data_AttributeInfo_h_1805524062(TEXT("/Script/Aura"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_AbilitySystem_Data_AttributeInfo_h_210154384(TEXT("/Script/Aura"),
 		Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_AbilitySystem_Data_AttributeInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_AbilitySystem_Data_AttributeInfo_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_AbilitySystem_Data_AttributeInfo_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_AbilitySystem_Data_AttributeInfo_h_Statics::ScriptStructInfo),
 		nullptr, 0);

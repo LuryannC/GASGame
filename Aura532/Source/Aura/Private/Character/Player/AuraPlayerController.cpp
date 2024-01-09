@@ -4,11 +4,11 @@
 #include "Character/Player/AuraPlayerController.h"
 
 #include "EnhancedInputSubsystems.h"
-#include "EnhancedInputComponent.h"
+#include "GameplayTagContainer.h"
 #include "InputActionValue.h"
 #include "Camera/CameraComponent.h"
 #include "Character/AuraCharacter.h"
-#include "GameFramework/SpringArmComponent.h"
+#include "Input/AuraInputComponent.h"
 #include "Interactions/EnemyInterface.h"
 
 
@@ -48,15 +48,19 @@ void AAuraPlayerController::SetupInputComponent()
 {
 	Super::SetupInputComponent();
 
-	UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(InputComponent);
+	UAuraInputComponent* AuraInputComponent = CastChecked<UAuraInputComponent>(InputComponent);
 
 	// Move
-	EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAuraPlayerController::Move);
+	AuraInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAuraPlayerController::Move);
 
 	// Rotate Camera
-	EnhancedInputComponent->BindAction(RotateAction,ETriggerEvent::Triggered, this, &AAuraPlayerController::RotateCamera);
+	AuraInputComponent->BindAction(RotateAction,ETriggerEvent::Triggered, this, &AAuraPlayerController::RotateCamera);
 
-	EnhancedInputComponent->BindAction(OpenAttributeMenuAction, ETriggerEvent::Triggered, this,&AAuraPlayerController::OpenAttributeMenu);
+	// Menus
+	AuraInputComponent->BindAction(OpenAttributeMenuAction, ETriggerEvent::Triggered, this,&AAuraPlayerController::OpenAttributeMenu);
+
+	// Abilities
+	AuraInputComponent->BindAbilityActions(InputConfig, this, &ThisClass::AbilityInputTagPressed, &ThisClass::AbilityInputTagReleased, &ThisClass::AbilityInputTagHeld);
 }
 
 void AAuraPlayerController::Move(const FInputActionValue& ActionValue)
@@ -152,4 +156,19 @@ void AAuraPlayerController::CursorTrace()
 			//UE_LOG(LogTemp, Warning, TEXT("Hit Location: %s"), *HitLocation.ToString());
 		}
 	}
+}
+
+void AAuraPlayerController::AbilityInputTagPressed(FGameplayTag InputTag)
+{
+	GEngine->AddOnScreenDebugMessage(1, 3.f, FColor::Red, *InputTag.ToString());
+}
+
+void AAuraPlayerController::AbilityInputTagReleased(FGameplayTag InputTag)
+{
+	GEngine->AddOnScreenDebugMessage(2, 3.f, FColor::Blue, *InputTag.ToString());
+}
+
+void AAuraPlayerController::AbilityInputTagHeld(FGameplayTag InputTag)
+{
+	GEngine->AddOnScreenDebugMessage(3, 3.f, FColor::Green, *InputTag.ToString());
 }
