@@ -66,7 +66,9 @@
             "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemreplicationproxyinterface.generated.h",
             "d:\\epicgames\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemcomponent.generated.h",
             "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auraabilitysystemcomponent.generated.h",
-            "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\auragameplaytags.h"
+            "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\auragameplaytags.h",
+            "d:\\repositories\\gasgame\\aura532\\source\\aura\\public\\abilitysystem\\abilities\\auragameplayability.h",
+            "d:\\repositories\\gasgame\\aura532\\intermediate\\build\\win64\\unrealeditor\\inc\\aura\\uht\\auragameplayability.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
