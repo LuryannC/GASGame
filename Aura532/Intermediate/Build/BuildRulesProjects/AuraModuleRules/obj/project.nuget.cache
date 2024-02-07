@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VjVDr9VNNB/D/2A1fMFthPkbSrq5vCbNyRahdvoZk7LVSLB4kB2LbS0BaQKCS1urcIvgP7DpOw+B+GOimMrQKQ==",
+  "dgSpecHash": "+PyvavvUGHllsWu6qqgz5YTiRszh2OJHL74CbTD+CZH8FIRRmJTM0sfM8OCMt5bTmiHcI1MWfD8vwBl6K/vcAg==",
   "success": true,
   "projectFilePath": "D:\\Repositories\\GASGame\\Aura532\\Intermediate\\Build\\BuildRulesProjects\\AuraModuleRules\\AuraModuleRules.csproj",
   "expectedPackageFiles": [
@@ -139,10 +139,7 @@
     "C:\\Users\\luria\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\luria\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\luria\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\luria\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\luria\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\luria\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\luria\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
+    "C:\\Users\\luria\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

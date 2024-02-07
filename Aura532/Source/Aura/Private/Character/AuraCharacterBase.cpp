@@ -30,6 +30,12 @@ void AAuraCharacterBase::BeginPlay()
 	
 }
 
+FTransform AAuraCharacterBase::GetCombatSocketTransform()
+{
+	check(Weapon);
+	return Weapon->GetSocketTransform(WeaponTipSocketName);
+}
+
 void AAuraCharacterBase::InitAbilityActorInfo()
 {
 }

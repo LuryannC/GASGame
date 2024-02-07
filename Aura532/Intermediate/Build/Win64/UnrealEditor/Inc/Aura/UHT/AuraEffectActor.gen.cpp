@@ -469,20 +469,20 @@ void EmptyLinkFunctionForGeneratedCodeAuraEffectActor() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AAuraEffectActor);
 	AAuraEffectActor::~AAuraEffectActor() {}
-	struct Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics
+	struct Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::EnumInfo[] = {
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::EnumInfo[] = {
 		{ EEffectApplicationPolicy_StaticEnum, TEXT("EEffectApplicationPolicy"), &Z_Registration_Info_UEnum_EEffectApplicationPolicy, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1722026963U) },
 		{ EEffectRemovalPolicy_StaticEnum, TEXT("EEffectRemovalPolicy"), &Z_Registration_Info_UEnum_EEffectRemovalPolicy, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3097338331U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_AAuraEffectActor, AAuraEffectActor::StaticClass, TEXT("AAuraEffectActor"), &Z_Registration_Info_UClass_AAuraEffectActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAuraEffectActor), 2910883443U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_3348708741(TEXT("/Script/Aura"),
-		Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_3348708741(TEXT("/Script/Aura"),
+		Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repositories_GASGame_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::EnumInfo));
+		Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Actor_AuraEffectActor_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
