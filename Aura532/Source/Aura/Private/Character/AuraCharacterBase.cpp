@@ -33,6 +33,10 @@ void AAuraCharacterBase::BeginPlay()
 FTransform AAuraCharacterBase::GetCombatSocketTransform()
 {
 	check(Weapon);
+
+	FVector CameraTransform = 
+	FTransform SocketTransform = Weapon->GetSocketTransform(WeaponTipSocketName);
+	
 	return Weapon->GetSocketTransform(WeaponTipSocketName);
 }
 

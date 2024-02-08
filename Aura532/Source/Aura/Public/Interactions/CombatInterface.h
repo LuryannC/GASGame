@@ -25,5 +25,6 @@ public:
 
 	virtual int32 GetPlayerLevel();
 
+	UFUNCTION()
 	virtual FTransform GetCombatSocketTransform();
 };

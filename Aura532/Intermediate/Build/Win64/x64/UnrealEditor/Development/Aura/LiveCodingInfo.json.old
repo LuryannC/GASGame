@@ -14,14 +14,12 @@
 			"AuraAssetManager.cpp.obj",
 			"AuraGameplayTags.cpp.obj",
 			"AuraCharacter.cpp.obj",
-			"AuraCharacterBase.cpp.obj",
 			"AuraEnemy.cpp.obj",
 			"AuraPlayerController.cpp.obj",
 			"AuraPlayerState.cpp.obj",
 			"AuraGameModeBase.cpp.obj",
 			"AuraInputComponent.cpp.obj",
 			"AuraInputConfig.cpp.obj",
-			"CombatInterface.cpp.obj",
 			"AuraHUD.cpp.obj",
 			"AttributeMenuWidgetController.cpp.obj",
 			"AuraWidgetController.cpp.obj",
@@ -56,6 +54,8 @@
 			"OverlayWidgetController.gen.cpp.obj",
 			"AuraProjectileSpell.cpp.obj",
 			"AuraProjectile.cpp.obj",
+			"AuraCharacterBase.cpp.obj",
+			"CombatInterface.cpp.obj",
 			"EnemyInterface.cpp.obj"
 		]
 	}

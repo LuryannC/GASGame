@@ -86,6 +86,8 @@
 				"D:/Repositories/GASGame/Aura532/Content/Blueprints/Actors/Areas/GE_HealthRegenPlataform.uasset",
 				"D:/Repositories/GASGame/Aura532/Content/Blueprints/AbilitySystem/GameplayAbilities/Fire/FireBolt/BP_FireBolt.uasset",
 				"D:/Repositories/GASGame/Aura532/Content/Blueprints/AbilitySystem/GameplayAbilities/Fire/FireBolt/GA_FireBolt.uasset",
+				"D:/Repositories/GASGame/Aura532/Content/Assets/Characters/Aura/Animations/Abilities/AM_Cast_FireBolt.uasset",
+				"D:/Repositories/GASGame/Aura532/Content/Blueprints/AnimNotifies/AN_MontageEvent.uasset",
 				"D:/Repositories/GASGame/Aura532/Content/Blueprints/UI/WidgetController/WBP_AttributeMenuWidgetController.uasset",
 				"D:/Repositories/GASGame/Aura532/Content/Blueprints/AbilitySystem/GameplayEffects/PrimaryAttributes/GE_AuraPrimaryAttributes.uasset",
 				"D:/Repositories/GASGame/Aura532/Content/Blueprints/AbilitySystem/GameplayEffects/DefaultAttributes/GE_SecondaryAttributes.uasset",
