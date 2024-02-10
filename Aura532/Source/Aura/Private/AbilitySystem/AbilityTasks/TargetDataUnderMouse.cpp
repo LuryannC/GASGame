@@ -3,7 +3,7 @@
 
 #include "AbilitySystem/AbilityTasks/TargetDataUnderMouse.h"
 
-#include "Kismet/KismetMathLibrary.h"
+#include "AbilitySystemComponent.h"
 
 UTargetDataUnderMouse* UTargetDataUnderMouse::CreateTargetDataUnderMouse(UGameplayAbility* OwningAbility)
 {
@@ -13,28 +13,64 @@ UTargetDataUnderMouse* UTargetDataUnderMouse::CreateTargetDataUnderMouse(UGamepl
 
 void UTargetDataUnderMouse::Activate()
 {
+	const bool bIsLocallyControlled = Ability->GetCurrentActorInfo()->IsLocallyControlled();
+	if (bIsLocallyControlled)
+	{
+		SendCursorMouseData();
+	}
+	else
+	{
+		const FGameplayAbilitySpecHandle SpecHandle = GetAbilitySpecHandle();
+		const FPredictionKey ActivationPredictionKey = GetActivationPredictionKey();
+		AbilitySystemComponent.Get()->AbilityTargetDataSetDelegate(SpecHandle, ActivationPredictionKey).AddUObject(this, &UTargetDataUnderMouse::OnTargetDateReplicatedCallback);
+		const bool bCalledDelegate = AbilitySystemComponent.Get()->CallReplicatedTargetDataDelegatesIfSet(SpecHandle, ActivationPredictionKey);
+		if (!bCalledDelegate)
+		{
+			SetWaitingOnRemotePlayerData();
+		}
+	}
+	
+
+}
+
+void UTargetDataUnderMouse::SendCursorMouseData()
+{
+	FScopedPredictionWindow ScopedPrediction(AbilitySystemComponent.Get());
+	
 	const APlayerController* PC = Ability->GetCurrentActorInfo()->PlayerController.Get();
 	FHitResult CursorHit;
 	int32 SizeX;
 	int32 SizeY;
 	PC->GetViewportSize(SizeX, SizeY);
-	FVector2D ViewportSize = {FMath::RoundToDouble(SizeX), FMath::RoundToDouble(SizeY)};
-	//GEngine->GameViewport->GetViewportSize(ViewportSize);
+	const FVector2D ViewportSize = {FMath::RoundToDouble(SizeX), FMath::RoundToDouble(SizeY)};
 	
 	PC->GetHitResultAtScreenPosition(ViewportSize * 0.5f, ECC_Visibility, false, CursorHit);
-	ValidDataDelegate.Broadcast(CursorHit.ImpactPoint);
-
-	/*
-	if (IsValid(PC))
-	{
-		if (!PC->HasAuthority())
-		{
-			FHitResult CursorHit;
-			FVector2D ViewportSize;
-			GEngine->GameViewport->GetViewportSize(ViewportSize);
 	
-			PC->GetHitResultAtScreenPosition(ViewportSize * 0.5f, ECC_Visibility, false, CursorHit);
-			ValidDataDelegate.Broadcast(CursorHit.ImpactPoint);
-		}
-	}*/
+	FGameplayAbilityTargetDataHandle DataHandle;
+	FGameplayAbilityTargetData_SingleTargetHit* Data = new FGameplayAbilityTargetData_SingleTargetHit();
+	Data->HitResult = CursorHit;
+	DataHandle.Add(Data);
+
+	AbilitySystemComponent->ServerSetReplicatedTargetData(
+		GetAbilitySpecHandle(),
+		GetActivationPredictionKey(),
+		DataHandle,
+		FGameplayTag(),
+		AbilitySystemComponent->ScopedPredictionKey);
+
+
+	if(ShouldBroadcastAbilityTaskDelegates())
+	{
+		ValidDataDelegate.Broadcast(DataHandle);
+	}
+}
+
+void UTargetDataUnderMouse::OnTargetDateReplicatedCallback(const FGameplayAbilityTargetDataHandle& DataHandle,
+	FGameplayTag ActivationTag)
+{
+	AbilitySystemComponent->ConsumeClientReplicatedTargetData(GetAbilitySpecHandle(), GetActivationPredictionKey());
+	if(ShouldBroadcastAbilityTaskDelegates())
+	{
+		ValidDataDelegate.Broadcast(DataHandle);
+	}
 }

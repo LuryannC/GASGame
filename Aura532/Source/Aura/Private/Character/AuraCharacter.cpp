@@ -52,6 +52,10 @@ void AAuraCharacter::OnRep_PlayerState()
 {
 	Super::OnRep_PlayerState();
 
+	/* Notes: So doesn't seems very good to initialize stuff as it depends on time it gets initialize.
+	 * If the game starts to fast it gets nullptr for PlayerState. Moved to the controller where it has a
+	 * "BeginPlayingState" function.
+	*/
 	// Init ability actor info for the client
 	//InitAbilityActorInfo();
 	

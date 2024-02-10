@@ -69,6 +69,7 @@ void AAuraPlayerController::BeginPlayingState()
 {
 	Super::BeginPlayingState();
 
+	// Init ability actor info for the client
 	if(AAuraCharacter* AuraCharacter = Cast<AAuraCharacter>(GetPawn()))
 	{
 		AuraCharacter->InitAbilityActorInfo();

@@ -14,13 +14,15 @@ void EmptyLinkFunctionForGeneratedCodeAuraProjectileSpell() {}
 	AURA_API UClass* Z_Construct_UClass_UAuraProjectileSpell();
 	AURA_API UClass* Z_Construct_UClass_UAuraProjectileSpell_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	UPackage* Z_Construct_UPackage__Script_Aura();
 // End Cross Module References
 	DEFINE_FUNCTION(UAuraProjectileSpell::execSpawnProjectile)
 	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_ProjectileTargetLocation);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->SpawnProjectile();
+		P_THIS->SpawnProjectile(Z_Param_Out_ProjectileTargetLocation);
 		P_NATIVE_END;
 	}
 	void UAuraProjectileSpell::StaticRegisterNativesUAuraProjectileSpell()
@@ -33,17 +35,37 @@ void EmptyLinkFunctionForGeneratedCodeAuraProjectileSpell() {}
 	}
 	struct Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics
 	{
+		struct AuraProjectileSpell_eventSpawnProjectile_Parms
+		{
+			FVector ProjectileTargetLocation;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ProjectileTargetLocation_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ProjectileTargetLocation;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::NewProp_ProjectileTargetLocation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::NewProp_ProjectileTargetLocation = { "ProjectileTargetLocation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AuraProjectileSpell_eventSpawnProjectile_Parms, ProjectileTargetLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::NewProp_ProjectileTargetLocation_MetaData), Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::NewProp_ProjectileTargetLocation_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::NewProp_ProjectileTargetLocation,
+	};
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/AuraProjectileSpell.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAuraProjectileSpell, nullptr, "SpawnProjectile", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::Function_MetaDataParams), Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::Function_MetaDataParams) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAuraProjectileSpell, nullptr, "SpawnProjectile", nullptr, nullptr, Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::PropPointers), sizeof(Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::AuraProjectileSpell_eventSpawnProjectile_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04C80401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::Function_MetaDataParams), Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile_Statics::AuraProjectileSpell_eventSpawnProjectile_Parms) < MAX_uint16);
 	UFunction* Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -79,7 +101,7 @@ void EmptyLinkFunctionForGeneratedCodeAuraProjectileSpell() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UAuraProjectileSpell_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UAuraProjectileSpell_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile, "SpawnProjectile" }, // 748595966
+		{ &Z_Construct_UFunction_UAuraProjectileSpell_SpawnProjectile, "SpawnProjectile" }, // 611380722
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UAuraProjectileSpell_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -140,9 +162,9 @@ void EmptyLinkFunctionForGeneratedCodeAuraProjectileSpell() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_AbilitySystem_Abilities_AuraProjectileSpell_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UAuraProjectileSpell, UAuraProjectileSpell::StaticClass, TEXT("UAuraProjectileSpell"), &Z_Registration_Info_UClass_UAuraProjectileSpell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAuraProjectileSpell), 630955161U) },
+		{ Z_Construct_UClass_UAuraProjectileSpell, UAuraProjectileSpell::StaticClass, TEXT("UAuraProjectileSpell"), &Z_Registration_Info_UClass_UAuraProjectileSpell, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAuraProjectileSpell), 2492022352U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_AbilitySystem_Abilities_AuraProjectileSpell_h_3935097731(TEXT("/Script/Aura"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_AbilitySystem_Abilities_AuraProjectileSpell_h_3279076872(TEXT("/Script/Aura"),
 		Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_AbilitySystem_Abilities_AuraProjectileSpell_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_AbilitySystem_Abilities_AuraProjectileSpell_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeAuraCharacterBase() {}
 	AURA_API UClass* Z_Construct_UClass_AAuraCharacterBase_NoRegister();
 	AURA_API UClass* Z_Construct_UClass_UCombatInterface_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
@@ -22,8 +23,54 @@ void EmptyLinkFunctionForGeneratedCodeAuraCharacterBase() {}
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Aura();
 // End Cross Module References
+	DEFINE_FUNCTION(AAuraCharacterBase::execGetCombatSocketLocation)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetCombatSocketLocation();
+		P_NATIVE_END;
+	}
 	void AAuraCharacterBase::StaticRegisterNativesAAuraCharacterBase()
 	{
+		UClass* Class = AAuraCharacterBase::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GetCombatSocketLocation", &AAuraCharacterBase::execGetCombatSocketLocation },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics
+	{
+		struct AuraCharacterBase_eventGetCombatSocketLocation_Parms
+		{
+			FVector ReturnValue;
+		};
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AuraCharacterBase_eventGetCombatSocketLocation_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Character/AuraCharacterBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAuraCharacterBase, nullptr, "GetCombatSocketLocation", nullptr, nullptr, Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::PropPointers), sizeof(Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::AuraCharacterBase_eventGetCombatSocketLocation_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04880400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::Function_MetaDataParams), Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::AuraCharacterBase_eventGetCombatSocketLocation_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AAuraCharacterBase);
 	UClass* Z_Construct_UClass_AAuraCharacterBase_NoRegister()
@@ -33,6 +80,7 @@ void EmptyLinkFunctionForGeneratedCodeAuraCharacterBase() {}
 	struct Z_Construct_UClass_AAuraCharacterBase_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -72,6 +120,10 @@ void EmptyLinkFunctionForGeneratedCodeAuraCharacterBase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Aura,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AAuraCharacterBase_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_AAuraCharacterBase_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AAuraCharacterBase_GetCombatSocketLocation, "GetCombatSocketLocation" }, // 2228180388
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AAuraCharacterBase_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAuraCharacterBase_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
@@ -153,11 +205,11 @@ void EmptyLinkFunctionForGeneratedCodeAuraCharacterBase() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AAuraCharacterBase_Statics::PropPointers,
 		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AAuraCharacterBase_Statics::PropPointers),
 		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
@@ -183,9 +235,9 @@ void EmptyLinkFunctionForGeneratedCodeAuraCharacterBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Character_AuraCharacterBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AAuraCharacterBase, AAuraCharacterBase::StaticClass, TEXT("AAuraCharacterBase"), &Z_Registration_Info_UClass_AAuraCharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAuraCharacterBase), 3038451762U) },
+		{ Z_Construct_UClass_AAuraCharacterBase, AAuraCharacterBase::StaticClass, TEXT("AAuraCharacterBase"), &Z_Registration_Info_UClass_AAuraCharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAuraCharacterBase), 1600180207U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Character_AuraCharacterBase_h_1445929686(TEXT("/Script/Aura"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Character_AuraCharacterBase_h_1906290058(TEXT("/Script/Aura"),
 		Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Character_AuraCharacterBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Aura532_Source_Aura_Public_Character_AuraCharacterBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

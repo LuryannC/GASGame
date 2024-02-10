@@ -35,6 +35,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Combat")
 	FName WeaponTipSocketName;
 
+	UFUNCTION(BlueprintCallable)
 	virtual FVector GetCombatSocketLocation() override;
 
 	UPROPERTY()
