@@ -36,6 +36,7 @@ protected:
 	UFUNCTION(BlueprintNativeEvent)
 	void OpenAttributeMenu(const FInputActionValue& ActionValue);
 
+	virtual void BeginPlayingState() override;
 
 private:
 	UPROPERTY(EditAnywhere, Category="Input")

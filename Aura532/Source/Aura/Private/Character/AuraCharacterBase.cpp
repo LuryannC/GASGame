@@ -30,14 +30,10 @@ void AAuraCharacterBase::BeginPlay()
 	
 }
 
-FTransform AAuraCharacterBase::GetCombatSocketTransform()
+FVector AAuraCharacterBase::GetCombatSocketLocation()
 {
-	check(Weapon);
-
-	FVector CameraTransform = 
-	FTransform SocketTransform = Weapon->GetSocketTransform(WeaponTipSocketName);
-	
-	return Weapon->GetSocketTransform(WeaponTipSocketName);
+	check(Weapon);	
+	return Weapon->GetSocketLocation(WeaponTipSocketName);
 }
 
 void AAuraCharacterBase::InitAbilityActorInfo()

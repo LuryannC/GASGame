@@ -65,6 +65,16 @@ void AAuraPlayerController::SetupInputComponent()
 	AuraInputComponent->BindAbilityActions(InputConfig, this, &ThisClass::AbilityInputTagPressed, &ThisClass::AbilityInputTagReleased, &ThisClass::AbilityInputTagHeld);
 }
 
+void AAuraPlayerController::BeginPlayingState()
+{
+	Super::BeginPlayingState();
+
+	if(AAuraCharacter* AuraCharacter = Cast<AAuraCharacter>(GetPawn()))
+	{
+		AuraCharacter->InitAbilityActorInfo();
+	}
+}
+
 void AAuraPlayerController::Move(const FInputActionValue& ActionValue)
 {
 	const FVector2d InputAxisVector = ActionValue.Get<FVector2d>();

@@ -23,7 +23,8 @@ void UAuraProjectileSpell::SpawnProjectile()
 	ICombatInterface* CombatInterface = Cast<ICombatInterface>(GetAvatarActorFromActorInfo());
 	if (CombatInterface)
 	{
-		const FTransform SocketLocation = CombatInterface->GetCombatSocketTransform();
+		FTransform SocketLocation;
+		SocketLocation.SetLocation(CombatInterface->GetCombatSocketLocation());
 
 		AAuraProjectile* Projectile = GetWorld()->SpawnActorDeferred<AAuraProjectile>(
 			ProjectileClass,

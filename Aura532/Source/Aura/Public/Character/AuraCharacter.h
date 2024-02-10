@@ -36,7 +36,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Camera")
 	class UCameraComponent* FollowCamera;
 
-private:
 	virtual void InitAbilityActorInfo() override;
+private:
 
 };

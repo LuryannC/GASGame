@@ -33,11 +33,13 @@ UAttributeMenuWidgetController* UAuraAbilitySystemLibrary::GetAttributeMenuWidge
 	{
 		if (AAuraHUD* AuraHUD = Cast<AAuraHUD>(PC->GetHUD()))
 		{
-			AAuraPlayerState* PS = PC->GetPlayerState<AAuraPlayerState>();
-			UAbilitySystemComponent* ASC = PS->GetAbilitySystemComponent();
-			UAttributeSet* Attributes = PS->GetAttributeSet();
-			const FWidgetControllerParams WidgetControllerParams(PC, PS, ASC, Attributes);
-			return AuraHUD->GetAttributeMenuWidgetController(WidgetControllerParams);
+			if(AAuraPlayerState* PS = PC->GetPlayerState<AAuraPlayerState>())
+			{
+				UAbilitySystemComponent* ASC = PS->GetAbilitySystemComponent();
+				UAttributeSet* Attributes = PS->GetAttributeSet();
+				const FWidgetControllerParams WidgetControllerParams(PC, PS, ASC, Attributes);
+				return AuraHUD->GetAttributeMenuWidgetController(WidgetControllerParams);
+			}
 		}
 	}
 	return nullptr;

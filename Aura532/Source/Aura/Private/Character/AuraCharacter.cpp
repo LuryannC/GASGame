@@ -37,7 +37,10 @@ AAuraCharacter::AAuraCharacter()
 void AAuraCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
-
+	if(GIsServer)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Orange, TEXT("PossessedBy - Server"));
+	}
 	// Init ability actor info for the server
 	InitAbilityActorInfo();
 
@@ -50,7 +53,7 @@ void AAuraCharacter::OnRep_PlayerState()
 	Super::OnRep_PlayerState();
 
 	// Init ability actor info for the client
-	InitAbilityActorInfo();
+	//InitAbilityActorInfo();
 	
 }
 
@@ -80,8 +83,7 @@ void AAuraCharacter::InitAbilityActorInfo()
 				AuraHUD->InitOverlay(AuraPlayerController, AuraPlayerState, AbilitySystemComponent, AttributesSet);
 				//AuraHUD->InitAttributeMenu(AuraPlayerController, AuraPlayerState, AbilitySystemComponent, AttributesSet);
 			}
-		}
-
-		InitializeDefaultAttributes();
+			InitializeDefaultAttributes();
+		}		
 	}
 }
