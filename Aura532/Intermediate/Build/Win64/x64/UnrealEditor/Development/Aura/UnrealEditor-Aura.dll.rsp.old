@@ -36,10 +36,8 @@
 /FUNCTIONPADMIN:6
 "D:\Repositories\GASGame\Aura532\Intermediate\Build\Win64\x64\AuraEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
 "D:\Repositories\GASGame\Aura532\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\Module.Aura.cpp.obj"
-"D:\Repositories\GASGame\Aura532\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\AuraAbilitySystemComponent.cpp.obj"
-"D:\Repositories\GASGame\Aura532\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\AuraCharacter.cpp.obj"
-"D:\Repositories\GASGame\Aura532\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\Aura.init.gen.cpp.obj"
-"D:\Repositories\GASGame\Aura532\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\AuraAbilitySystemComponent.gen.cpp.obj"
+"D:\Repositories\GASGame\Aura532\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\AuraCharacterBase.cpp.obj"
+"D:\Repositories\GASGame\Aura532\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\CombatInterface.cpp.obj"
 "D:\Repositories\GASGame\Aura532\Intermediate\Build\Win64\x64\UnrealEditor\Development\Aura\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayTags\UnrealEditor-GameplayTags.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayTasks\UnrealEditor-GameplayTasks.lib"

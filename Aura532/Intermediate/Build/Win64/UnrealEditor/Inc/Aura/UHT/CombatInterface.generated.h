@@ -23,6 +23,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define FID_Aura532_Source_Aura_Public_Interactions_CombatInterface_h_13_ACCESSORS
+#define FID_Aura532_Source_Aura_Public_Interactions_CombatInterface_h_13_CALLBACK_WRAPPERS
 #define FID_Aura532_Source_Aura_Public_Interactions_CombatInterface_h_13_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	AURA_API UCombatInterface(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
@@ -60,6 +61,7 @@ protected: \
 public: \
 	typedef UCombatInterface UClassType; \
 	typedef ICombatInterface ThisClass; \
+	static void Execute_UpdateFacingTarget(UObject* O, FVector const& Target); \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 
@@ -72,6 +74,7 @@ public: \
 	FID_Aura532_Source_Aura_Public_Interactions_CombatInterface_h_13_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
 	FID_Aura532_Source_Aura_Public_Interactions_CombatInterface_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Aura532_Source_Aura_Public_Interactions_CombatInterface_h_13_ACCESSORS \
+	FID_Aura532_Source_Aura_Public_Interactions_CombatInterface_h_13_CALLBACK_WRAPPERS \
 	FID_Aura532_Source_Aura_Public_Interactions_CombatInterface_h_13_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

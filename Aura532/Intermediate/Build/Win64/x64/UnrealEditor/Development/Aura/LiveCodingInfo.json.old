@@ -4,6 +4,8 @@
 		"Module.Aura.cpp.obj": [
 			"AttributeInfo.gen.cpp.obj",
 			"AttributeMenuWidgetController.gen.cpp.obj",
+			"Aura.init.gen.cpp.obj",
+			"AuraAbilitySystemComponent.gen.cpp.obj",
 			"AuraAbilitySystemLibrary.gen.cpp.obj",
 			"AuraAssetManager.gen.cpp.obj",
 			"AuraAttributeSet.gen.cpp.obj",
@@ -32,6 +34,7 @@
 			"AuraGameplayAbility.cpp.obj",
 			"AuraProjectileSpell.cpp.obj",
 			"TargetDataUnderMouse.cpp.obj",
+			"AuraAbilitySystemComponent.cpp.obj",
 			"AuraAbilitySystemLibrary.cpp.obj",
 			"AuraAttributeSet.cpp.obj",
 			"AttributeInfo.cpp.obj",
@@ -41,24 +44,21 @@
 			"AuraProjectile.cpp.obj",
 			"AuraAssetManager.cpp.obj",
 			"AuraGameplayTags.cpp.obj",
-			"AuraCharacterBase.cpp.obj",
+			"AuraCharacter.cpp.obj",
 			"AuraEnemy.cpp.obj",
 			"AuraPlayerController.cpp.obj",
 			"AuraPlayerState.cpp.obj",
 			"AuraGameModeBase.cpp.obj",
 			"AuraInputComponent.cpp.obj",
 			"AuraInputConfig.cpp.obj",
-			"CombatInterface.cpp.obj",
 			"EnemyInterface.cpp.obj",
 			"AuraHUD.cpp.obj",
 			"AttributeMenuWidgetController.cpp.obj",
 			"AuraWidgetController.cpp.obj",
 			"OverlayWidgetController.cpp.obj",
 			"AuraUserWidget.cpp.obj",
-			"Aura.init.gen.cpp.obj",
-			"AuraAbilitySystemComponent.gen.cpp.obj",
-			"AuraAbilitySystemComponent.cpp.obj",
-			"AuraCharacter.cpp.obj"
+			"AuraCharacterBase.cpp.obj",
+			"CombatInterface.cpp.obj"
 		]
 	}
 }
