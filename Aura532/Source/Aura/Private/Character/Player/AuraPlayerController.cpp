@@ -69,11 +69,12 @@ void AAuraPlayerController::BeginPlayingState()
 {
 	Super::BeginPlayingState();
 
+	// Problem, it makes the pickup message appears twice for some reason
 	// Init ability actor info for the client
-	if(AAuraCharacter* AuraCharacter = Cast<AAuraCharacter>(GetPawn()))
-	{
-		AuraCharacter->InitAbilityActorInfo();
-	}
+	// if(AAuraCharacter* AuraCharacter = Cast<AAuraCharacter>(GetPawn()))
+	// {
+	// 	AuraCharacter->InitAbilityActorInfo();
+	// }
 }
 
 void AAuraPlayerController::Move(const FInputActionValue& ActionValue)

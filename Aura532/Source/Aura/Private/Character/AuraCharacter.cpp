@@ -37,10 +37,6 @@ AAuraCharacter::AAuraCharacter()
 void AAuraCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
-	if(GIsServer)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Orange, TEXT("PossessedBy - Server"));
-	}
 	// Init ability actor info for the server
 	InitAbilityActorInfo();
 
@@ -55,9 +51,10 @@ void AAuraCharacter::OnRep_PlayerState()
 	/* Notes: So doesn't seems very good to initialize stuff as it depends on time it gets initialize.
 	 * If the game starts to fast it gets nullptr for PlayerState. Moved to the controller where it has a
 	 * "BeginPlayingState" function.
+	 * Read BeginPlayState for more information
 	*/
 	// Init ability actor info for the client
-	//InitAbilityActorInfo();
+	InitAbilityActorInfo();
 	
 }
 
@@ -73,21 +70,19 @@ void AAuraCharacter::InitAbilityActorInfo()
 	if(AAuraPlayerState* AuraPlayerState = GetPlayerState<AAuraPlayerState>())
 	{
 		AuraPlayerState->GetAbilitySystemComponent()->InitAbilityActorInfo(AuraPlayerState, this);
+		Cast<UAuraAbilitySystemComponent>(AuraPlayerState->GetAbilitySystemComponent())->AbilityActorInfoSet();
 
 		// AbilitySystem is valid by now
 		AbilitySystemComponent = AuraPlayerState->GetAbilitySystemComponent();
 		AttributesSet = AuraPlayerState->GetAttributeSet();
-
-		Cast<UAuraAbilitySystemComponent>(AuraPlayerState->GetAbilitySystemComponent())->AbilityActorInfoSet();
 		
 		if(AAuraPlayerController * AuraPlayerController = Cast<AAuraPlayerController>(GetController()))
 		{
 			if (AAuraHUD* AuraHUD = Cast<AAuraHUD>(AuraPlayerController->GetHUD()))
 			{
 				AuraHUD->InitOverlay(AuraPlayerController, AuraPlayerState, AbilitySystemComponent, AttributesSet);
-				//AuraHUD->InitAttributeMenu(AuraPlayerController, AuraPlayerState, AbilitySystemComponent, AttributesSet);
 			}
+		}
 			InitializeDefaultAttributes();
-		}		
 	}
 }
