@@ -41,24 +41,24 @@
 			"MMC_MaxHealth.cpp.obj",
 			"MMC_MaxMana.cpp.obj",
 			"AuraEffectActor.cpp.obj",
-			"AuraProjectile.cpp.obj",
 			"AuraAssetManager.cpp.obj",
 			"AuraGameplayTags.cpp.obj",
 			"AuraCharacter.cpp.obj",
+			"AuraCharacterBase.cpp.obj",
 			"AuraEnemy.cpp.obj",
 			"AuraPlayerController.cpp.obj",
 			"AuraPlayerState.cpp.obj",
 			"AuraGameModeBase.cpp.obj",
 			"AuraInputComponent.cpp.obj",
 			"AuraInputConfig.cpp.obj",
+			"CombatInterface.cpp.obj",
 			"EnemyInterface.cpp.obj",
 			"AuraHUD.cpp.obj",
 			"AttributeMenuWidgetController.cpp.obj",
 			"AuraWidgetController.cpp.obj",
 			"OverlayWidgetController.cpp.obj",
 			"AuraUserWidget.cpp.obj",
-			"AuraCharacterBase.cpp.obj",
-			"CombatInterface.cpp.obj"
+			"AuraProjectile.cpp.obj"
 		]
 	}
 }
