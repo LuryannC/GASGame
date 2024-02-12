@@ -28,13 +28,10 @@
 			"MMC_MaxMana.gen.cpp.obj",
 			"OverlayWidgetController.gen.cpp.obj",
 			"TargetDataUnderMouse.gen.cpp.obj",
-			"Aura.cpp.obj",
 			"AuraGameplayAbility.cpp.obj",
-			"AuraProjectileSpell.cpp.obj",
 			"TargetDataUnderMouse.cpp.obj",
 			"AuraAbilitySystemComponent.cpp.obj",
 			"AuraAbilitySystemLibrary.cpp.obj",
-			"AuraAttributeSet.cpp.obj",
 			"AttributeInfo.cpp.obj",
 			"MMC_MaxHealth.cpp.obj",
 			"MMC_MaxMana.cpp.obj",
@@ -42,8 +39,6 @@
 			"AuraAssetManager.cpp.obj",
 			"AuraGameplayTags.cpp.obj",
 			"AuraCharacter.cpp.obj",
-			"AuraCharacterBase.cpp.obj",
-			"AuraEnemy.cpp.obj",
 			"AuraPlayerController.cpp.obj",
 			"AuraPlayerState.cpp.obj",
 			"AuraGameModeBase.cpp.obj",
@@ -58,7 +53,12 @@
 			"AuraUserWidget.cpp.obj",
 			"Aura.init.gen.cpp.obj",
 			"AuraProjectile.gen.cpp.obj",
-			"AuraProjectile.cpp.obj"
+			"Aura.cpp.obj",
+			"AuraProjectileSpell.cpp.obj",
+			"AuraAttributeSet.cpp.obj",
+			"AuraProjectile.cpp.obj",
+			"AuraCharacterBase.cpp.obj",
+			"AuraEnemy.cpp.obj"
 		]
 	}
 }
