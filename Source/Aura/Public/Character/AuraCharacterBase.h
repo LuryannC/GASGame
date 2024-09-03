@@ -56,7 +56,7 @@ protected:
 	TArray<TSubclassOf<UGameplayEffect>> DefaultAttributesArray;
 	
 	void ApplyEffectToSelf(TSubclassOf<UGameplayEffect> AttributeClass, float Level = 1.0f) const;
-	void InitializeDefaultAttributes();
+	virtual void InitializeDefaultAttributes();
 	void InitializeCharacterAbilities();
 
 private:

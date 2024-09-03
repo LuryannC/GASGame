@@ -6,7 +6,7 @@
 /I "Runtime\Json\Public"
 /I "Runtime\RenderCore\Public"
 /I "Runtime\RHI\Public"
-/I "D:\Repositories\GASGame\Aura532\Plugins\Developer\RiderLink\Source"
+/I "D:\Repositories\GASGame\Plugins\Developer\RiderLink\Source"
 /external:W0
 /external:I "ThirdParty\mimalloc\include"
 /external:I "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\INCLUDE"

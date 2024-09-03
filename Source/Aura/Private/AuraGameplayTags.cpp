@@ -37,4 +37,7 @@ void FAuraGameplayTags::InitializeNativeGameplayTags()
 	GameplayTags.InputTag_Ability3 = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.Ability3"), FString("Input Tag for Ability 3"));
 	GameplayTags.InputTag_Ability4 = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("InputTag.Ability4"), FString("Input Tag for Ability 4"));
 
+	// Data
+	GameplayTags.Damage = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("Damage"), FString("Damage data tag"));
+
 }
