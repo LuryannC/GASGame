@@ -40,4 +40,7 @@ void FAuraGameplayTags::InitializeNativeGameplayTags()
 	// Data
 	GameplayTags.DataTag_Damage = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("DataTag.Damage"), FString("Damage data tag"));
 
+	// Combat
+	GameplayTags.Effects_HitReaction = UGameplayTagsManager::Get().AddNativeGameplayTag(FName("Effects.HitReaction"), FString("Effect Hit Reaction"));
+
 }

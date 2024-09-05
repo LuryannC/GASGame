@@ -46,6 +46,9 @@ public:
 
  // Data tags
  FGameplayTag DataTag_Damage;
+
+ // Combat
+ FGameplayTag Effects_HitReaction;
 private:
  static FAuraGameplayTags GameplayTags;
 };
