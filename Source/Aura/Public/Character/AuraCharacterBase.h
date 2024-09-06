@@ -29,6 +29,11 @@ public:
 
 	virtual UAnimMontage* GetHitReactMontage_Implementation() override;
 	
+	virtual void Die() override;
+
+	UFUNCTION(NetMulticast, Reliable)
+	virtual void MulticastHandleDeath();
+	
 protected:
 	virtual void BeginPlay() override;
 
@@ -49,18 +54,29 @@ protected:
 
 	virtual void InitAbilityActorInfo();
 
-	// UPROPERTY(BlueprintReadOnly, EditAnywhere, Category="Attributes")
-	// TSubclassOf<UGameplayEffect> DefaultPrimaryAttributes;
-	//
-	// UPROPERTY(BlueprintReadOnly, EditAnywhere, Category="Attributes")
-	// TSubclassOf<UGameplayEffect> DefaultSecondaryAttributes;
-
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category="Attributes")
 	TArray<TSubclassOf<UGameplayEffect>> DefaultAttributesArray;
 	
 	void ApplyEffectToSelf(TSubclassOf<UGameplayEffect> AttributeClass, float Level = 1.0f) const;
 	virtual void InitializeDefaultAttributes();
 	void InitializeCharacterAbilities();
+
+
+	/* Dissolve Effects */
+
+	void Dissolve();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void BP_StartCharacterDissolveTimeline(UMaterialInstanceDynamic* DynamicMaterialInstance);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void BP_StartWeaponDissolveTimeline(UMaterialInstanceDynamic* DynamicMaterialInstance);
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TObjectPtr<UMaterialInstance> DissolveMaterialInstance;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TObjectPtr<UMaterialInstance> WeaponDissolveMaterialInstance;
 
 private:
 	UPROPERTY(EditAnywhere, Category="Abilities")
