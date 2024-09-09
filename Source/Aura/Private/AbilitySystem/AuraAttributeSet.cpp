@@ -6,8 +6,10 @@
 #include "AbilitySystemBlueprintLibrary.h"
 #include "AuraGameplayTags.h"
 #include "GameplayEffectExtension.h"
+#include "Character/Player/AuraPlayerController.h"
 #include "GameFramework/Character.h"
 #include "Interactions/CombatInterface.h"
+#include "Kismet/GameplayStatics.h"
 #include "Net/UnrealNetwork.h"
 
 UAuraAttributeSet::UAuraAttributeSet()
@@ -98,6 +100,7 @@ void UAuraAttributeSet::SetEffectProperties(const FGameplayEffectModCallbackData
 	}
 }
 
+
 void UAuraAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data)
 {
 	Super::PostGameplayEffectExecute(Data);
@@ -139,6 +142,20 @@ void UAuraAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallba
 				TagContainer.AddTag(FAuraGameplayTags::Get().Effects_HitReaction);
 				PropertiesOwners.Target.AbilitySystemComponent->TryActivateAbilitiesByTag(TagContainer);
 			}
+
+			ShowFloatingText(PropertiesOwners, LocalIncomingDamage);
+		}
+	}
+}
+
+void UAuraAttributeSet::ShowFloatingText(const FPropertiesOwners& Props, float DamageAmount) const
+{
+	// Avoid self damage
+	if (Props.Source.Character != Props.Target.Character)
+	{
+		if (AAuraPlayerController* PC = Cast<AAuraPlayerController>(UGameplayStatics::GetPlayerController(Props.Source.Character, 0)))
+		{
+			PC->Client_ShowDamageNumber(DamageAmount, Props.Target.Character);
 		}
 	}
 }
