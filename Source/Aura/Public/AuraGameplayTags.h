@@ -47,6 +47,10 @@ public:
  // Data tags
  FGameplayTag DataTag_Damage;
 
+ // Damage Types
+ TArray<FGameplayTag> DamageTypes;
+ FGameplayTag DamageType_Fire;
+
  // Combat
  FGameplayTag Effects_HitReaction;
 private:
