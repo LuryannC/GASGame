@@ -55,6 +55,16 @@ void AAuraEnemy::Die()
 	Super::Die();
 }
 
+void AAuraEnemy::SetCombatTarget_Implementation(AActor* InCombatTarget)
+{
+	CombatTarget = InCombatTarget;
+}
+
+AActor* AAuraEnemy::GetCombatTarget_Implementation() const
+{
+	return CombatTarget;
+}
+
 void AAuraEnemy::HighlightActor()
 {
 	GetMesh()->SetRenderCustomDepth(true);
@@ -82,7 +92,7 @@ void AAuraEnemy::BeginPlay()
 	
 	if (HasAuthority())
 	{
-		UAuraAbilitySystemLibrary::GiveStartupAbilities(this, AbilitySystemComponent);
+		UAuraAbilitySystemLibrary::GiveStartupAbilities(this, AbilitySystemComponent, CharacterClass);
 	}
 
 	// Setting the progress bar widget controller, as the widget controller is a UObject I can bind anything that inherits from that.

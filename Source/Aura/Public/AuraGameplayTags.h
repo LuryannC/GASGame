@@ -62,6 +62,9 @@ public:
 
  // Combat
  FGameplayTag Effects_HitReaction;
+
+ FGameplayTag Abilities_Attack;
+ 
 private:
  static FAuraGameplayTags GameplayTags;
 };

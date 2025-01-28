@@ -31,7 +31,7 @@ public:
 	static void InitializeDefaultAttributes(const UObject* WorldContextObject, ECharacterClass CharacterClass, float Level, UAbilitySystemComponent* ASC);
 
 	UFUNCTION(BlueprintCallable, Category="AurabilitySystemLibrary|CharacterClassDefaults")
-	static void GiveStartupAbilities(const UObject* WorldContextObject, UAbilitySystemComponent* ASC);
+	static void GiveStartupAbilities(const UObject* WorldContextObject, UAbilitySystemComponent* ASC, ECharacterClass CharacterClass);
 
 	UFUNCTION(BlueprintCallable, Category="AurabilitySystemLibrary|CharacterClassDefaults")
 	static UCharacterClassInfo* GetCharacterClassInfo(const UObject* WorldContextObject);
@@ -47,5 +47,8 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category="AurabilitySystemLibrary|GameplayEffects")
 	static void SetIsCriticalHit(UPARAM(ref) FGameplayEffectContextHandle& EffectContextHandle, bool bInIsCriticalHit);
+
+	UFUNCTION(BlueprintCallable, Category="AurabilitySystemLibrary|GameplayEffects")
+	static void GetLivePlayersWithinRadius(const UObject* WorldContextObject, TArray<AActor*>& OutOverlappingActors, TArray<AActor*> ActorsToIgnore, float Radius, const FVector& OriginLocation);
 private:
 };
