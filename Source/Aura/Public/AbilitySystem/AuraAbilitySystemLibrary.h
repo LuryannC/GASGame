@@ -50,5 +50,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="AurabilitySystemLibrary|GameplayEffects")
 	static void GetLivePlayersWithinRadius(const UObject* WorldContextObject, TArray<AActor*>& OutOverlappingActors, TArray<AActor*> ActorsToIgnore, float Radius, const FVector& OriginLocation);
+
+	UFUNCTION(BlueprintPure, Category="AurabilitySystemLibrary|GameplayEffects")
+	static bool IsNotFriend(AActor* FirstActor, AActor* SecondActor);
 private:
 };
